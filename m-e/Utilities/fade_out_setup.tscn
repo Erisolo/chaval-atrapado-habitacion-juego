@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cva5fg0hghjmd"]
+
+[ext_resource type="Texture2D" uid="uid://lh1ucf64nomu" path="res://assets/square.jpg" id="1_nc56l"]
+[ext_resource type="Script" uid="uid://ctww5ekh288a7" path="res://scripts/FadeOut.gd" id="2_12i7j"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_nc56l")
+script = ExtResource("2_12i7j")

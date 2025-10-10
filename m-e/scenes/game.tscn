@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqih7xgvju7to"]
+[gd_scene load_steps=5 format=3 uid="uid://dqih7xgvju7to"]
 
 [ext_resource type="PackedScene" uid="uid://cyyjelwi3nonx" path="res://prefabs/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://7djb6bcac32k" path="res://prefabs/interactable.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://drax6a6kdhvu8" path="res://prefabs/genericWall.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://cva5fg0hghjmd" path="res://Utilities/fade_out_setup.tscn" id="4_lbhrr"]
 
 [node name="game" type="Node2D"]
 
@@ -18,3 +19,6 @@ position = Vector2(508, 164)
 
 [node name="Interactable" parent="." instance=ExtResource("2_lnu2h")]
 position = Vector2(434, 51)
+
+[node name="Sprite2D" parent="." instance=ExtResource("4_lbhrr")]
+position = Vector2(92, 84)
