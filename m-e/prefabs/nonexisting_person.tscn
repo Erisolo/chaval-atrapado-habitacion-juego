@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1i23lgo0jhld"]
+
+[ext_resource type="Script" uid="uid://cm44gvs5hd4cw" path="res://scripts/touchable.gd" id="1_jyaje"]
+[ext_resource type="Texture2D" uid="uid://lh1ucf64nomu" path="res://assets/square.jpg" id="2_la1dj"]
+[ext_resource type="Texture2D" uid="uid://byr14pwlqjj8a" path="res://assets/cross.png" id="3_ae8mu"]
+[ext_resource type="Script" uid="uid://cury24mvkcjvy" path="res://scripts/ShowUIOnClick.gd" id="4_ae8mu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ae8mu"]
+radius = 47.0
+
+[node name="nonexistingPerson" type="Area2D"]
+script = ExtResource("1_jyaje")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ae8mu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4.76837e-07, 0)
+scale = Vector2(0.08375, 0.095593)
+texture = ExtResource("2_la1dj")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." node_paths=PackedStringArray("ui", "event")]
+scale = Vector2(0.0760417, 0.090625)
+texture = ExtResource("3_ae8mu")
+script = ExtResource("4_ae8mu")
+ui = NodePath(".")
+event = NodePath("..")
