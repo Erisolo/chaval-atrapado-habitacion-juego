@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5qtgs6vmhlf7"]
+
+[ext_resource type="Script" uid="uid://brlbhwro1q2hy" path="res://scripts/FixedMovement.gd" id="1_paaea"]
+[ext_resource type="Texture2D" uid="uid://c3rdlpyouw4cu" path="res://assets/vecna.png" id="2_u70id"]
+[ext_resource type="Script" uid="uid://cgidef4gr1w0p" path="res://scripts/ShakeTween.gd" id="3_u70id"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pj3vu"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_paaea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pj3vu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, 1.13687e-13)
+scale = Vector2(0.221591, 0.233647)
+texture = ExtResource("2_u70id")
+script = ExtResource("3_u70id")

@@ -41,9 +41,10 @@ script = ExtResource("1_oihpt")
 scale = Vector2(0.065625, 0.0657809)
 texture = ExtResource("1_uujia")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." node_paths=PackedStringArray("ui")]
 collision_mask = 2
 script = ExtResource("2_oihpt")
+ui = NodePath("AnimatedSprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_w60jx")

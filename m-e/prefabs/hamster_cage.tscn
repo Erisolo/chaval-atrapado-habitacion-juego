@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsn2f87gsn6h2"]
+
+[ext_resource type="Texture2D" uid="uid://lh1ucf64nomu" path="res://assets/square.jpg" id="1_4g364"]
+
+[sub_resource type="GDScript" id="GDScript_4g364"]
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4g364"]
+radius = 137.015
+
+[node name="Area2D" type="Area2D"]
+script = SubResource("GDScript_4g364")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4g364")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.38419e-07, -2.1684e-19)
+scale = Vector2(0.0775, 0.0826312)
+texture = ExtResource("1_4g364")
