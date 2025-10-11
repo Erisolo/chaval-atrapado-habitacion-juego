@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cj8xn1mntwliy"
+path="res://.godot/imported/HamsterDilogues.dialogue-4fd11949f3097f2dbc54f93a462d8650.tres"
+
+[deps]
+
+source_file="res://Dialogues/HamsterDilogues.dialogue"
+dest_files=["res://.godot/imported/HamsterDilogues.dialogue-4fd11949f3097f2dbc54f93a462d8650.tres"]
+
+[params]
+
+defaults=true
