@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://cyyjelwi3nonx"]
 
 [ext_resource type="Script" uid="uid://cj54y4qyjl22c" path="res://scripts/PlayerMovement.gd" id="1_4dohe"]
-[ext_resource type="Texture2D" uid="uid://crx8e0yc4kjp2" path="res://assets/idle.png" id="2_r66lb"]
+[ext_resource type="Texture2D" uid="uid://crx8e0yc4kjp2" path="res://assets/Idle.png" id="2_r66lb"]
 [ext_resource type="Texture2D" uid="uid://b62brflosjeuu" path="res://assets/walk-side.png" id="3_1txc5"]
 [ext_resource type="Texture2D" uid="uid://dtd00lqelu2b2" path="res://assets/frontWalk.png" id="4_1txc5"]
 [ext_resource type="Texture2D" uid="uid://2bsnlna0b15i" path="res://assets/backwalk-sheet.png" id="4_ht1c8"]
