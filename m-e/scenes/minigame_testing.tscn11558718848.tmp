@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://dnyn2hh01hxbr"]
+
+[ext_resource type="PackedScene" uid="uid://c5qtgs6vmhlf7" path="res://prefabs/hamster_hand.tscn" id="1_0v1a8"]
+[ext_resource type="Script" uid="uid://ch8bhq7u284qy" path="res://scripts/ResetScene.gd" id="1_5xq8n"]
+[ext_resource type="PackedScene" uid="uid://djim5rfxwrvx2" path="res://prefabs/beholder.tscn" id="2_0qdjn"]
+[ext_resource type="PackedScene" uid="uid://bsn2f87gsn6h2" path="res://prefabs/hamster_cage.tscn" id="2_i7qf2"]
+[ext_resource type="Script" uid="uid://bowplt6ima3r0" path="res://scripts/ShowUI.gd" id="3_d2j4i"]
+[ext_resource type="Script" uid="uid://4kpbq53svndu" path="res://scripts/ChangeSceneOnVisible.gd" id="6_owwkn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0qdjn"]
+font_size = 128
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="minigame_testing" type="Node2D" node_paths=PackedStringArray("finish")]
+script = ExtResource("1_5xq8n")
+finish = [NodePath("RigidBody2D/Beholder"), NodePath("RigidBody2D2/YouWin")]
+
+[node name="RigidBody2D" parent="." instance=ExtResource("1_0v1a8")]
+position = Vector2(-1, 352)
+
+[node name="Camera2D" type="Camera2D" parent="RigidBody2D"]
+position = Vector2(10, -31)
+limit_bottom = 325
+
+[node name="Beholder" parent="RigidBody2D" instance=ExtResource("2_0qdjn")]
+z_index = -1
+yLimit = 325
+
+[node name="RigidBody2D2" parent="." node_paths=PackedStringArray("ui") instance=ExtResource("2_i7qf2")]
+position = Vector2(0, -1906)
+script = ExtResource("3_d2j4i")
+ui = NodePath("YouWin")
+
+[node name="YouWin" type="Label" parent="RigidBody2D2"]
+visible = false
+offset_left = -382.0
+offset_top = -50.0
+offset_right = 184.0
+offset_bottom = 125.0
+scale = Vector2(1.34033, 1.2876)
+text = "YOU WIN"
+label_settings = SubResource("LabelSettings_0qdjn")
+script = ExtResource("6_owwkn")
+
+[connection signal="visibility_changed" from="RigidBody2D2/YouWin" to="RigidBody2D2/YouWin" method="_on_visibility_changed"]
