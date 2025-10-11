@@ -8,7 +8,7 @@
 
 [node name="player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(203, 82)
-scale = Vector2(4.8102093, 4.3295197)
+scale = Vector2(4.81021, 4.32952)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(-2, -14)

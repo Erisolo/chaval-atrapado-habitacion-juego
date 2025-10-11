@@ -50,6 +50,7 @@ ui = NodePath("AnimatedSprite2D")
 shape = SubResource("CircleShape2D_w60jx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+visible = false
 position = Vector2(0, -151)
 sprite_frames = SubResource("SpriteFrames_p6pdp")
 autoplay = "default"

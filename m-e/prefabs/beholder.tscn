@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://djim5rfxwrvx2"]
+
+[ext_resource type="Texture2D" uid="uid://7oewrxwhlxr4" path="res://assets/AntonioLobato.jpg" id="1_f3gv1"]
+[ext_resource type="Script" uid="uid://dfuy6oewdkwg0" path="res://scripts/BeholderApparition.gd" id="2_2r3d2"]
+[ext_resource type="Script" uid="uid://d08ctnwxyduky" path="res://scripts/beholder.gd" id="2_tnmc3"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("2_tnmc3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("1_f3gv1")
+script = ExtResource("2_2r3d2")

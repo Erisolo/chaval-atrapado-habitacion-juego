@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b62brflosjeuu"
-path="res://.godot/imported/walk-side.png-53274a6676146307e49f630c55fe3980.ctex"
+uid="uid://7oewrxwhlxr4"
+path="res://.godot/imported/AntonioLobato.jpg-7267bddf36acc0e6dba6ef84b10fc581.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/walk-side.png"
-dest_files=["res://.godot/imported/walk-side.png-53274a6676146307e49f630c55fe3980.ctex"]
+source_file="res://assets/AntonioLobato.jpg"
+dest_files=["res://.godot/imported/AntonioLobato.jpg-7267bddf36acc0e6dba6ef84b10fc581.ctex"]
 
 [params]
 
