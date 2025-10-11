@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnb6ad5bba20v"
-path="res://.godot/imported/keyboard buttons.png-48b61f6c8a9c740e9157dbf6444a8f29.ctex"
+uid="uid://ds7fysmv54brh"
+path="res://.godot/imported/grapadoraOutline..png-5424a6cf7a81ab63ab624a431a4b1f1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/keyboard buttons.png"
-dest_files=["res://.godot/imported/keyboard buttons.png-48b61f6c8a9c740e9157dbf6444a8f29.ctex"]
+source_file="res://assets/roomObjects/grapadoraOutline..png"
+dest_files=["res://.godot/imported/grapadoraOutline..png-5424a6cf7a81ab63ab624a431a4b1f1b.ctex"]
 
 [params]
 

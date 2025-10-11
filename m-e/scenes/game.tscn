@@ -1,15 +1,26 @@
-[gd_scene load_steps=16 format=3 uid="uid://dqih7xgvju7to"]
+[gd_scene load_steps=37 format=3 uid="uid://dqih7xgvju7to"]
 
 [ext_resource type="PackedScene" uid="uid://cyyjelwi3nonx" path="res://prefabs/player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://s8ui1ipxnhdr" path="res://scripts/interactable.gd" id="2_p57ef"]
-[ext_resource type="Texture2D" uid="uid://m4fosxgsbsx0" path="res://assets/hamster.png" id="3_gee14"]
+[ext_resource type="Texture2D" uid="uid://m4fosxgsbsx0" path="res://assets/roomObjects/hamster.png" id="3_gee14"]
 [ext_resource type="Texture2D" uid="uid://jxxartslfn5h" path="res://assets/room.png" id="3_lbhrr"]
-[ext_resource type="Texture2D" uid="uid://c4eg3iblpxg75" path="res://assets/bed.png" id="3_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://c4eg3iblpxg75" path="res://assets/roomObjects/bed.png" id="3_u5sy4"]
 [ext_resource type="Resource" uid="uid://cj8xn1mntwliy" path="res://Dialogues/HamsterDilogues.dialogue" id="3_vtaks"]
-[ext_resource type="Texture2D" uid="uid://eq8xj6ak86li" path="res://assets/hamsterOutline.png" id="4_0tnpc"]
-[ext_resource type="Texture2D" uid="uid://nwn8q8xslkel" path="res://assets/bedOutline.png" id="4_gee14"]
+[ext_resource type="Texture2D" uid="uid://eq8xj6ak86li" path="res://assets/roomObjects/hamsterOutline.png" id="4_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://nwn8q8xslkel" path="res://assets/roomObjects/bedOutline.png" id="4_gee14"]
 [ext_resource type="Script" uid="uid://bowplt6ima3r0" path="res://scripts/ShowUI.gd" id="5_0tnpc"]
-[ext_resource type="Resource" uid="uid://cktesfjwl7ytt" path="res://Dialogues/testDialogue.dialogue" id="7_kvpfn"]
+[ext_resource type="Resource" uid="uid://ded43vq6t5sqm" path="res://Dialogues/Stappler.dialogue" id="7_264po"]
+[ext_resource type="Texture2D" uid="uid://cjv6tb7bodka4" path="res://assets/roomObjects/desk.png" id="7_dinhu"]
+[ext_resource type="Texture2D" uid="uid://b4pfpt47cs7cu" path="res://assets/roomObjects/grapadora.png" id="7_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://ds7fysmv54brh" path="res://assets/roomObjects/grapadoraOutline..png" id="8_264po"]
+[ext_resource type="Texture2D" uid="uid://cq13etc55svy0" path="res://assets/roomObjects/wardrobeOUtline.png" id="8_ca42v"]
+[ext_resource type="Texture2D" uid="uid://babkuqec5baff" path="res://assets/roomObjects/deskOutline.png" id="8_kvuet"]
+[ext_resource type="Texture2D" uid="uid://d0i1npowsbw8n" path="res://assets/roomObjects/deskButTop.png" id="9_kvuet"]
+[ext_resource type="Texture2D" uid="uid://bsw6yyjq3ompy" path="res://assets/roomObjects/scissors.png" id="10_5newe"]
+[ext_resource type="Texture2D" uid="uid://cn2wbc51mjrbb" path="res://assets/roomObjects/scissorsOutline.png" id="11_37s47"]
+[ext_resource type="Resource" uid="uid://cgacmgkwydylu" path="res://Dialogues/BedDialogue.dialogue" id="11_trtic"]
+[ext_resource type="Texture2D" uid="uid://b8v51pk2y4l51" path="res://assets/balatro.jpg" id="15_ir15t"]
+[ext_resource type="Script" uid="uid://br1ui7iqugiyd" path="res://scripts/SlowlyRotate.gd" id="16_ca42v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
 size = Vector2(775, 8.69403)
@@ -20,6 +31,36 @@ size = Vector2(88.5012, 42.0357)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvpfn"]
 size = Vector2(86.5, 68)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37s47"]
+size = Vector2(54.682304, 33.428482)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bt5mj"]
+size = Vector2(26, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
+size = Vector2(40.14931, 21.651741)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5newe"]
+size = Vector2(27, 3)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_trtic"]
+load_path = "res://.godot/imported/wardrobe.png-9c13143f51a06395ac6702c07b010198.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ca42v"]
+size = Vector2(73.82289, 34.857048)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rysoc"]
+size = Vector2(94.5, 345.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvuet"]
+size = Vector2(78.03213, 55.301178)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trtic"]
+size = Vector2(271, 146)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir15t"]
+size = Vector2(61.622284, 130.38261)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtaks"]
 size = Vector2(120.016, 95.1429)
 
@@ -28,29 +69,29 @@ size = Vector2(145, 266.708)
 
 [node name="game" type="Node2D"]
 
-[node name="fondo" type="RigidBody2D" parent="."]
+[node name="habitacion" type="RigidBody2D" parent="."]
 position = Vector2(193, 91)
 gravity_scale = 0.0
 
-[node name="Room" type="Sprite2D" parent="fondo"]
+[node name="Room" type="Sprite2D" parent="habitacion"]
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("3_lbhrr")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="fondo"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="habitacion"]
 position = Vector2(9.00003, -306)
 shape = SubResource("RectangleShape2D_iywne")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="fondo"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="habitacion"]
 position = Vector2(395, -55)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_iywne")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="fondo"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="habitacion"]
 position = Vector2(-381, -56)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_iywne")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fondo"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="habitacion"]
 position = Vector2(5.00003, 311)
 shape = SubResource("RectangleShape2D_iywne")
 
@@ -58,28 +99,27 @@ shape = SubResource("RectangleShape2D_iywne")
 position = Vector2(324, -159)
 gravity_scale = 0.0
 script = ExtResource("2_p57ef")
-collison_area = NodePath("Bed/Area2D")
+collison_area = NodePath("image/Area2D")
 dialogue = ExtResource("3_vtaks")
 
-[node name="Bed" type="Sprite2D" parent="hamster"]
+[node name="image" type="Sprite2D" parent="hamster"]
 z_index = 5
 position = Vector2(-28, -36)
 scale = Vector2(3, 3)
 texture = ExtResource("3_gee14")
 
-[node name="BedOutline" type="Sprite2D" parent="hamster/Bed"]
+[node name="outline" type="Sprite2D" parent="hamster/image"]
 visible = false
 z_index = -1
 position = Vector2(1.14441e-05, 0.333336)
-scale = Vector2(1, 1)
 texture = ExtResource("4_0tnpc")
 
-[node name="Area2D" type="Area2D" parent="hamster/Bed" node_paths=PackedStringArray("ui")]
+[node name="Area2D" type="Area2D" parent="hamster/image" node_paths=PackedStringArray("ui")]
 collision_mask = 2
 script = ExtResource("5_0tnpc")
-ui = NodePath("../BedOutline")
+ui = NodePath("../outline")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hamster/Bed/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hamster/image/Area2D"]
 position = Vector2(-1.16667, 2.47916)
 scale = Vector2(0.772118, 1.16667)
 shape = SubResource("RectangleShape2D_dinhu")
@@ -88,12 +128,157 @@ shape = SubResource("RectangleShape2D_dinhu")
 position = Vector2(-26, -50)
 shape = SubResource("RectangleShape2D_kvpfn")
 
+[node name="tijeras" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
+z_index = 12
+position = Vector2(268, 393)
+gravity_scale = 0.0
+script = ExtResource("2_p57ef")
+collison_area = NodePath("image/Area2D")
+dialogue = ExtResource("3_vtaks")
+
+[node name="image" type="Sprite2D" parent="tijeras"]
+z_index = 5
+position = Vector2(-28, -36)
+scale = Vector2(3, 3)
+texture = ExtResource("10_5newe")
+
+[node name="outline" type="Sprite2D" parent="tijeras/image"]
+visible = false
+z_index = -1
+position = Vector2(1.14441e-05, 0.333336)
+texture = ExtResource("11_37s47")
+
+[node name="Area2D" type="Area2D" parent="tijeras/image" node_paths=PackedStringArray("ui")]
+collision_mask = 2
+script = ExtResource("5_0tnpc")
+ui = NodePath("../outline")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tijeras/image/Area2D"]
+position = Vector2(4.6666627, -4.000003)
+scale = Vector2(0.772118, 1.1666701)
+shape = SubResource("RectangleShape2D_37s47")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tijeras"]
+position = Vector2(-23, -49)
+shape = SubResource("RectangleShape2D_bt5mj")
+
+[node name="grapadora" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
+z_index = 12
+position = Vector2(126, 211)
+gravity_scale = 0.0
+script = ExtResource("2_p57ef")
+collison_area = NodePath("image/Area2D")
+dialogue = ExtResource("7_264po")
+
+[node name="image" type="Sprite2D" parent="grapadora"]
+z_index = 5
+scale = Vector2(3, 3)
+texture = ExtResource("7_ssvqc")
+
+[node name="outline" type="Sprite2D" parent="grapadora/image"]
+visible = false
+z_index = -1
+position = Vector2(1.14441e-05, 0.333336)
+texture = ExtResource("8_264po")
+
+[node name="Area2D" type="Area2D" parent="grapadora/image" node_paths=PackedStringArray("ui")]
+collision_mask = 2
+script = ExtResource("5_0tnpc")
+ui = NodePath("../outline")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="grapadora/image/Area2D"]
+position = Vector2(5.833332, -7.3697815)
+scale = Vector2(0.772118, 1.1666701)
+shape = SubResource("RectangleShape2D_1kice")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="grapadora"]
+position = Vector2(-27, 35)
+shape = SubResource("RectangleShape2D_5newe")
+
+[node name="wardrobe" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
+position = Vector2(562, 27)
+gravity_scale = 0.0
+script = ExtResource("2_p57ef")
+collison_area = NodePath("image/Area2D")
+dialogue = ExtResource("3_vtaks")
+
+[node name="image" type="Sprite2D" parent="wardrobe"]
+z_index = 5
+position = Vector2(-28, -36)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_trtic")
+
+[node name="outline" type="Sprite2D" parent="wardrobe/image"]
+visible = false
+z_index = -1
+position = Vector2(1.14441e-05, 0.333336)
+texture = ExtResource("8_ca42v")
+
+[node name="Area2D" type="Area2D" parent="wardrobe/image" node_paths=PackedStringArray("ui")]
+collision_mask = 2
+script = ExtResource("5_0tnpc")
+ui = NodePath("../outline")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wardrobe/image/Area2D"]
+position = Vector2(-10.333328, 37.000008)
+scale = Vector2(0.772118, 1.1666701)
+shape = SubResource("RectangleShape2D_ca42v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wardrobe"]
+position = Vector2(-24.75, -33.25)
+shape = SubResource("RectangleShape2D_rysoc")
+
+[node name="desk" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
+position = Vector2(48, 282)
+gravity_scale = 0.0
+script = ExtResource("2_p57ef")
+collison_area = NodePath("image/Area2D")
+dialogue = ExtResource("3_vtaks")
+
+[node name="image" type="Sprite2D" parent="desk"]
+z_index = 5
+position = Vector2(-28, -36)
+scale = Vector2(3, 3)
+texture = ExtResource("7_dinhu")
+
+[node name="outline" type="Sprite2D" parent="desk/image"]
+visible = false
+z_index = -1
+position = Vector2(1.14441e-05, 0.333336)
+texture = ExtResource("8_kvuet")
+
+[node name="Area2D" type="Area2D" parent="desk/image" node_paths=PackedStringArray("ui")]
+collision_mask = 2
+script = ExtResource("5_0tnpc")
+ui = NodePath("../outline")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="desk/image/Area2D"]
+position = Vector2(-19.458336, 0.592453)
+scale = Vector2(0.772118, 1.1666701)
+shape = SubResource("RectangleShape2D_kvuet")
+
+[node name="top(for aesthetic)" type="Sprite2D" parent="desk/image"]
+z_index = 11
+z_as_relative = false
+y_sort_enabled = true
+texture = ExtResource("9_kvuet")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="desk"]
+position = Vector2(-6.5, 44)
+shape = SubResource("RectangleShape2D_trtic")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="desk"]
+position = Vector2(-130.0081, -99.97954)
+rotation = -0.8552921
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_ir15t")
+
 [node name="cama" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
 position = Vector2(-27, -112)
 gravity_scale = 0.0
 script = ExtResource("2_p57ef")
 collison_area = NodePath("Bed/Area2D")
-dialogue = ExtResource("7_kvpfn")
+dialogue = ExtResource("11_trtic")
 
 [node name="Bed" type="Sprite2D" parent="cama"]
 z_index = 5
@@ -104,7 +289,6 @@ texture = ExtResource("3_u5sy4")
 visible = false
 z_index = -1
 position = Vector2(1.14441e-05, 0.333336)
-scale = Vector2(1, 1)
 texture = ExtResource("4_gee14")
 
 [node name="Area2D" type="Area2D" parent="cama/Bed" node_paths=PackedStringArray("ui")]
@@ -122,10 +306,19 @@ position = Vector2(-27.5, 18.6458)
 shape = SubResource("RectangleShape2D_gee14")
 
 [node name="player" parent="." instance=ExtResource("1_uwrxv")]
-z_index = 20
+z_index = 10
 position = Vector2(196, 69)
 scale = Vector2(6, 5.566)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(-2, -14)
 position_smoothing_enabled = true
+
+[node name="fondo" type="Sprite2D" parent="."]
+modulate = Color(0.2240232, 0.14273188, 0.44203168, 0.7019608)
+z_index = -1
+position = Vector2(225.00003, -117.999954)
+scale = Vector2(1.783032, 2.2444441)
+texture = ExtResource("15_ir15t")
+script = ExtResource("16_ca42v")
+rotationAmount = 0.05

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ded43vq6t5sqm"
+path="res://.godot/imported/Stappler.dialogue-4f05ef40b461ddd81b44fc719b97754a.tres"
+
+[deps]
+
+source_file="res://Dialogues/Stappler.dialogue"
+dest_files=["res://.godot/imported/Stappler.dialogue-4f05ef40b461ddd81b44fc719b97754a.tres"]
+
+[params]
+
+defaults=true

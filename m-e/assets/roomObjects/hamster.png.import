@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnb6ad5bba20v"
-path="res://.godot/imported/keyboard buttons.png-48b61f6c8a9c740e9157dbf6444a8f29.ctex"
+uid="uid://m4fosxgsbsx0"
+path="res://.godot/imported/hamster.png-9de2e75a24c6d30a6d51ceaaa8ab9bc4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/keyboard buttons.png"
-dest_files=["res://.godot/imported/keyboard buttons.png-48b61f6c8a9c740e9157dbf6444a8f29.ctex"]
+source_file="res://assets/roomObjects/hamster.png"
+dest_files=["res://.godot/imported/hamster.png-9de2e75a24c6d30a6d51ceaaa8ab9bc4.ctex"]
 
 [params]
 
