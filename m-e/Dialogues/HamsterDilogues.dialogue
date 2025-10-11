@@ -1,0 +1,7 @@
+~ start
+ : Mr. Nugget. Your hamster.
+ : He hasn't moved in a while.
+ : maybe you should feed him, from time to time.
+#TODO empezar quest
+#do startQuest(hamster) o un indice, lo q prefieras
+=> END

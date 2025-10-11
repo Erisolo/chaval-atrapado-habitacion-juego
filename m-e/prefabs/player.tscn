@@ -128,7 +128,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0bak"]
-size = Vector2(8, 27)
+size = Vector2(8, 4)
 
 [node name="player" type="CharacterBody2D"]
 collision_layer = 2
@@ -142,5 +142,5 @@ animation = &"walk-back"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, -15.5)
+position = Vector2(-3, -4)
 shape = SubResource("RectangleShape2D_x0bak")
