@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnb6ad5bba20v"
-path="res://.godot/imported/keyboard buttons.png-48b61f6c8a9c740e9157dbf6444a8f29.ctex"
+uid="uid://2bsnlna0b15i"
+path="res://.godot/imported/backwalk-sheet.png-e4b5f96a9f6299ba634755701e8b288a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/keyboard buttons.png"
-dest_files=["res://.godot/imported/keyboard buttons.png-48b61f6c8a9c740e9157dbf6444a8f29.ctex"]
+source_file="res://assets/backwalk-sheet.png"
+dest_files=["res://.godot/imported/backwalk-sheet.png-e4b5f96a9f6299ba634755701e8b288a.ctex"]
 
 [params]
 
