@@ -6,7 +6,7 @@ signal button_pressed;
 func _ready() -> void:
 	checknote.visible = false;
 	
-func _process(_delta):
+func _process(_delta) -> void:
 	if checknote.visible && Input.is_action_just_pressed("ui_accept"):
 		button_pressed.emit()
 		
@@ -16,7 +16,7 @@ func showChores():
 	animationplayer.play("jump_in")
 	await animationplayer.animation_finished
 	await button_pressed
-	animationplayer.play("jump_out")
+	animationplayer.play("jump-out")
 	await animationplayer.animation_finished
 	checknote.visible = false;
 	
