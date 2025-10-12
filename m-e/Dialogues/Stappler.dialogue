@@ -15,3 +15,36 @@ Stappler: Hey pal, something I can help you with?
 	Stappler: Glad to help!
 do Checklist.getChore("InsideYou").finishCurrentStep()
 => END
+~ Hamster0
+# comenta algo sobre la comida del hamster
+=> END
+~ Hamster1
+# comenta algo sobre haber dado de comer al hamster/bichos feos
+=> END
+~ Hamster2
+# comenta algo sobre el hamster estando tieso
+=> END
+~ Hamster3
+# comenta algo sobre haberte comido a tu hamster
+=> END
+~ InsideYou0
+# comenta algo sobre las pastillas que acaban de aparecer de los dientes del suelo
+=> END
+~ InsideYou1
+# comenta algo sobre las pastillas que te acabas de comer
+=> END
+~ InsideYou2
+# comenta algo sobre lo chungo que ha sido lo de la mano en la garganta
+=> END
+~ InsideYou4
+# comenta algo sobre haberte ayudado con tu herida
+=> END
+~ Photos1
+# comenta algo sobre una chica de pelo cubriendole la cara
+=> END
+~ Photos2
+# comenta algo sobre un hombre de gafas
+=> END
+~ Photos3
+# comenta algo sobre una persona de sonrisa peculiar/haber reconocido a las persona inexistentes
+=> END
