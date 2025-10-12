@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cnk61fbhc4qt4"]
 
 [ext_resource type="Texture2D" uid="uid://dmdbvlhr1la08" path="res://assets/mirror.png" id="1_w6f60"]
-[ext_resource type="Script" uid="uid://cksrl7mqkxiuh" path="res://scenes/ShowForSeconds.gd" id="2_i7v4k"]
+[ext_resource type="Script" uid="uid://cksrl7mqkxiuh" path="res://scripts/ShowForSeconds.gd" id="2_i7v4k"]
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(581, 323)
