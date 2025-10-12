@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsw6yyjq3ompy"
-path="res://.godot/imported/scissors.png-adb8f98bc84effb2dd130f60a1d8c33a.ctex"
+uid="uid://bp65pifgrfwhb"
+path="res://.godot/imported/teethOutline.png-c24c2ee714b8f65d6f3072bc8f65ae6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/roomObjects/scissors.png"
-dest_files=["res://.godot/imported/scissors.png-adb8f98bc84effb2dd130f60a1d8c33a.ctex"]
+source_file="res://assets/roomObjects/teethOutline.png"
+dest_files=["res://.godot/imported/teethOutline.png-c24c2ee714b8f65d6f3072bc8f65ae6e.ctex"]
 
 [params]
 

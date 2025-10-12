@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=42 format=3 uid="uid://dqih7xgvju7to"]
+=======
+[gd_scene load_steps=46 format=3 uid="uid://dqih7xgvju7to"]
+>>>>>>> refs/remotes/origin/main
 
 [ext_resource type="Script" uid="uid://cyhr8s18ujl2l" path="res://scripts/ChoreManager.gd" id="1_37s47"]
 [ext_resource type="PackedScene" uid="uid://cyyjelwi3nonx" path="res://prefabs/player.tscn" id="1_uwrxv"]
@@ -11,11 +15,14 @@
 [ext_resource type="Texture2D" uid="uid://nwn8q8xslkel" path="res://assets/roomObjects/bedOutline.png" id="4_gee14"]
 [ext_resource type="Script" uid="uid://bowplt6ima3r0" path="res://scripts/ShowUI.gd" id="5_0tnpc"]
 [ext_resource type="Resource" uid="uid://ded43vq6t5sqm" path="res://Dialogues/Stappler.dialogue" id="7_264po"]
+[ext_resource type="Texture2D" uid="uid://dvxorwmbw7mot" path="res://assets/roomObjects/mirror.png" id="7_bhx41"]
 [ext_resource type="Texture2D" uid="uid://cjv6tb7bodka4" path="res://assets/roomObjects/desk.png" id="7_dinhu"]
+[ext_resource type="Resource" uid="uid://ctwaddt8kbyn0" path="res://Dialogues/mirror.dialogue" id="7_qnb83"]
 [ext_resource type="Texture2D" uid="uid://b4pfpt47cs7cu" path="res://assets/roomObjects/grapadora.png" id="7_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://ds7fysmv54brh" path="res://assets/roomObjects/grapadoraOutline..png" id="8_264po"]
 [ext_resource type="Texture2D" uid="uid://cq13etc55svy0" path="res://assets/roomObjects/wardrobeOUtline.png" id="8_ca42v"]
 [ext_resource type="Texture2D" uid="uid://babkuqec5baff" path="res://assets/roomObjects/deskOutline.png" id="8_kvuet"]
+[ext_resource type="Texture2D" uid="uid://bd5tahqu1slkt" path="res://assets/roomObjects/mirrorOutline.png" id="8_qnb83"]
 [ext_resource type="Texture2D" uid="uid://d0i1npowsbw8n" path="res://assets/roomObjects/deskButTop.png" id="9_kvuet"]
 [ext_resource type="Texture2D" uid="uid://bsw6yyjq3ompy" path="res://assets/roomObjects/scissors.png" id="10_5newe"]
 [ext_resource type="Texture2D" uid="uid://cn2wbc51mjrbb" path="res://assets/roomObjects/scissorsOutline.png" id="11_37s47"]
@@ -36,6 +43,12 @@ size = Vector2(49.2153, 42.8928)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvpfn"]
 size = Vector2(86.5, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sww3w"]
+size = Vector2(52.84166, 51.485603)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suyxu"]
+size = Vector2(44, 98)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_37s47"]
 size = Vector2(54.6823, 33.4285)
@@ -132,8 +145,43 @@ shape = SubResource("RectangleShape2D_dinhu")
 position = Vector2(-26, -30.5)
 shape = SubResource("RectangleShape2D_kvpfn")
 
+<<<<<<< HEAD
 [node name="Door" parent="." instance=ExtResource("27_qnb83")]
 position = Vector2(372, -206)
+=======
+[node name="mirror" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
+position = Vector2(447, -251)
+gravity_scale = 0.0
+script = ExtResource("2_p57ef")
+collison_area = NodePath("image/Area2D")
+dialogue = ExtResource("7_qnb83")
+
+[node name="image" type="Sprite2D" parent="mirror"]
+z_index = 5
+position = Vector2(-25, -29)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("7_bhx41")
+
+[node name="outline" type="Sprite2D" parent="mirror/image"]
+visible = false
+z_index = -1
+position = Vector2(1.14441e-05, 0.333336)
+texture = ExtResource("8_qnb83")
+
+[node name="Area2D" type="Area2D" parent="mirror/image" node_paths=PackedStringArray("ui")]
+collision_mask = 2
+script = ExtResource("5_0tnpc")
+ui = NodePath("../outline")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mirror/image/Area2D"]
+position = Vector2(-1.5999908, 20)
+scale = Vector2(0.772118, 1.1666697)
+shape = SubResource("RectangleShape2D_sww3w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mirror"]
+position = Vector2(-28, -26)
+shape = SubResource("RectangleShape2D_suyxu")
+>>>>>>> refs/remotes/origin/main
 
 [node name="tijeras" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
 z_index = 12

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsw6yyjq3ompy"
-path="res://.godot/imported/scissors.png-adb8f98bc84effb2dd130f60a1d8c33a.ctex"
+uid="uid://ct3f0dg7iqr3q"
+path="res://.godot/imported/pills.png-1c96bb6c92ac80d49cf9d963fd270893.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/roomObjects/scissors.png"
-dest_files=["res://.godot/imported/scissors.png-adb8f98bc84effb2dd130f60a1d8c33a.ctex"]
+source_file="res://assets/roomObjects/pills.png"
+dest_files=["res://.godot/imported/pills.png-1c96bb6c92ac80d49cf9d963fd270893.ctex"]
 
 [params]
 
