@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dojp2d74vfdys"]
+
+[ext_resource type="Script" uid="uid://b6m12a4n26xfo" path="res://scripts/stomach_ache.gd" id="1_khqy6"]
+[ext_resource type="Texture2D" uid="uid://lh1ucf64nomu" path="res://assets/square.jpg" id="2_4cuco"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cuco"]
+size = Vector2(76, 60)
+
+[node name="stomach_ache" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_khqy6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4cuco")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0.500001)
+scale = Vector2(0.04875, 0.0395334)
+texture = ExtResource("2_4cuco")

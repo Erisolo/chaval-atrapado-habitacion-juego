@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bbcsjj8saqikr"
+path="res://.godot/imported/InsideYouDialogues.dialogue-6682877f078869d0521997e1c7aa77d9.tres"
+
+[deps]
+
+source_file="res://Dialogues/InsideYouDialogues.dialogue"
+dest_files=["res://.godot/imported/InsideYouDialogues.dialogue-6682877f078869d0521997e1c7aa77d9.tres"]
+
+[params]
+
+defaults=true
