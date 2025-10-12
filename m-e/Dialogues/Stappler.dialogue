@@ -1,5 +1,5 @@
 ~ start
-Stappler: [[Hi|Hello|Howdy|Hi there|Hey]], what's going on dude?
+Stappler: [[Hi|Hello|Yo|Heya|Hi there|Hey]], what's going on dude?
 - Say nothing
 	Stappler: Don't worry my dude, I know you're the quiet type. Nobody is perfect.
 	Stappler: For example, I'm just a stappler.
@@ -13,38 +13,61 @@ Stappler: Hey pal, something I can help you with?
 - Try to stapple something
 	You stapple your open wound
 	Stappler: Glad to help!
-do Checklist.getChore("InsideYou").finishCurrentStep()
+	do Checklist.getChore("InsideYou").finishCurrentStep()
 => END
 ~ Hamster0
-# comenta algo sobre la comida del hamster
+Stappler: Are you looking for anything, duderino?
+Stappler: If you are, I'm afraid I can't help you with that. 
+Stappler: I'm [wave]stationery[/wave].
+Stappler: And also not very observant.
 => END
 ~ Hamster1
-# comenta algo sobre haber dado de comer al hamster/bichos feos
+Stappler: Finally feeding Mr. Nugget uh? 
+Stappler: See, I always thought he was too needy, needing all that [wave] food [/wave] and [wave] water [/wave].
+Stappler: I'm much more simple, am I not?
 => END
 ~ Hamster2
-# comenta algo sobre el hamster estando tieso
+Stappler: Yo, I think you should talk to Mr. Nugget about that habit of his of staring directly into my eyes.
+Stappler: He has been doing it non-stop for the last three days, dude.
 => END
 ~ Hamster3
-# comenta algo sobre haberte comido a tu hamster
+Stappler: Thank you so much for getting rid of that awful staring beast, mr nugget or whatevs. He was seriosly freaking me out.
+Stappler: And also, you've finally eaten something! 
+Stappler: I was worried about you, dude. How are you supposed to pick up chicks looking like that? 
 => END
 ~ InsideYou0
-# comenta algo sobre las pastillas que acaban de aparecer de los dientes del suelo
+Stappler: Man, things these days never seem to be what they used to.
+Stappler: Everything changes all the time.
+Stappler: You don't, tho. 
+Stappler: Does your tum-tum still hurt, dude?
+Stappler: Bad luck.
 => END
 ~ InsideYou1
-# comenta algo sobre las pastillas que te acabas de comer
+Stappler: I never believed in modern medicine.
+Stappler: The wind in my hair, sand in my feet, and a pretty piece of paper by my side. Thats my medicine dude.
 => END
 ~ InsideYou2
-# comenta algo sobre lo chungo que ha sido lo de la mano en la garganta
+Stappler: Dude, you're looking pretty rough over there.
+Stappler: Have you always been that... Bumpy? Mangled?
+Stappler: Has your throat always had that weird shape?
 => END
 ~ InsideYou4
-# comenta algo sobre haberte ayudado con tu herida
+Stappler: Thank god, dude. You were looking pretty mangled up. 
+Stappler: Now we're [wave] ready to par-tey [/wave].
 => END
 ~ Photos1
-# comenta algo sobre una chica de pelo cubriendole la cara
+Stappler: I once had a one night stand with a brunette with long hair. She was pretty nice.
+Stappler: But you were also there and it got pretty weird.
+Stappler: I told her "bros before hoes!" and she totally ditched me.
 => END
 ~ Photos2
-# comenta algo sobre un hombre de gafas
+Stappler: So this brunette chick I hooked up with called over her brother or something, and things got pretty heated up.
+Stappler: I think he punched you or something.
+Stappler: Then I told him I knew karate and he calmed down a bit when I showed him my epic moves.
 => END
 ~ Photos3
-# comenta algo sobre una persona de sonrisa peculiar/haber reconocido a las persona inexistentes
+Stappler: So, as I was telling you, this chick and her brother turned out to be pretty chill.
+Stappler: I think I smoked a joint with them at some point.
+Stappler: Where you there? Do you remember?
+Stappler: I thought you did remember, I saw you looking at their pictures earlier.
 => END
