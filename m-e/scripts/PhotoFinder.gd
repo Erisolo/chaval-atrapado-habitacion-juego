@@ -15,5 +15,5 @@ func _on_objective_clicked():
 	nObjectives -= 1
 	
 	if nObjectives <= 0:
-		# Cosas de enhorabuena has ganado
+		Checklist.getChore("Photos").finishCurrentStep()
 		changeScene.emit("res://scenes/game.tscn")

@@ -12,6 +12,8 @@ var pillSprite = preload("res://assets/roomObjects/pills.png")
 var pillOutline = preload("res://assets/roomObjects/pillsOutline.png")
 var pillDialogue = preload("res://Dialogues/InsideYouDialogues.dialogue")
 var mirrorDialogue = preload("res://Dialogues/mirror.dialogue")
+# Photos route assets
+var photosDialogue = preload("res://Dialogues/Wardrobe.dialogue")
 
 func _ready() -> void:
 	Checklist.ChoreAdded.connect(_add_chore_listener)
@@ -86,4 +88,18 @@ func _manage_step(chore: Chore):
 			grappler.dialogueStartPoint = "BellyWound"
 		elif chore.currentStep == 4:
 			grappler.dialogueStartPoint = "start"
+			chore.finishCurrentStep()
+	elif chore.name == "Photos":
+		var wardrobe = $wardrobe
+		if chore.currentStep == 0:
+			SceneManager.changeScene("res://scenes/photo_mini_game.tscn")
+		elif chore.currentStep == 1:
+			wardrobe.dialogueStartPoint = "CheckAgain"
+			DialogueManager.show_dialogue_balloon(photosDialogue, "Solved")
+		elif chore.currentStep == 2:
+			wardrobe.dialogueStartPoint = "CheckAgainAgain"
+			DialogueManager.show_dialogue_balloon(photosDialogue, "Solved")
+		elif chore.currentStep == 3:
+			wardrobe.dialogueStartPoint = "Wardrobe"
+			DialogueManager.show_dialogue_balloon(photosDialogue, "AllSolved")
 			chore.finishCurrentStep()
