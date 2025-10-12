@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://dqih7xgvju7to"]
+[gd_scene load_steps=38 format=3 uid="uid://dqih7xgvju7to"]
 
 [ext_resource type="Script" uid="uid://cyhr8s18ujl2l" path="res://scripts/ChoreManager.gd" id="1_37s47"]
 [ext_resource type="PackedScene" uid="uid://cyyjelwi3nonx" path="res://prefabs/player.tscn" id="1_uwrxv"]
@@ -11,71 +11,62 @@
 [ext_resource type="Texture2D" uid="uid://nwn8q8xslkel" path="res://assets/roomObjects/bedOutline.png" id="4_gee14"]
 [ext_resource type="Script" uid="uid://bowplt6ima3r0" path="res://scripts/ShowUI.gd" id="5_0tnpc"]
 [ext_resource type="Resource" uid="uid://ded43vq6t5sqm" path="res://Dialogues/Stappler.dialogue" id="7_264po"]
-[ext_resource type="Texture2D" uid="uid://dvxorwmbw7mot" path="res://assets/roomObjects/mirror.png" id="7_bhx41"]
 [ext_resource type="Texture2D" uid="uid://cjv6tb7bodka4" path="res://assets/roomObjects/desk.png" id="7_dinhu"]
-[ext_resource type="Resource" uid="uid://ctwaddt8kbyn0" path="res://Dialogues/mirror.dialogue" id="7_qnb83"]
 [ext_resource type="Texture2D" uid="uid://b4pfpt47cs7cu" path="res://assets/roomObjects/grapadora.png" id="7_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://ds7fysmv54brh" path="res://assets/roomObjects/grapadoraOutline..png" id="8_264po"]
 [ext_resource type="Texture2D" uid="uid://cq13etc55svy0" path="res://assets/roomObjects/wardrobeOUtline.png" id="8_ca42v"]
 [ext_resource type="Texture2D" uid="uid://babkuqec5baff" path="res://assets/roomObjects/deskOutline.png" id="8_kvuet"]
-[ext_resource type="Texture2D" uid="uid://bd5tahqu1slkt" path="res://assets/roomObjects/mirrorOutline.png" id="8_qnb83"]
 [ext_resource type="Texture2D" uid="uid://d0i1npowsbw8n" path="res://assets/roomObjects/deskButTop.png" id="9_kvuet"]
 [ext_resource type="Texture2D" uid="uid://bsw6yyjq3ompy" path="res://assets/roomObjects/scissors.png" id="10_5newe"]
 [ext_resource type="Texture2D" uid="uid://cn2wbc51mjrbb" path="res://assets/roomObjects/scissorsOutline.png" id="11_37s47"]
 [ext_resource type="Resource" uid="uid://cgacmgkwydylu" path="res://Dialogues/BedDialogue.dialogue" id="11_trtic"]
-[ext_resource type="Resource" uid="uid://ymk84x0a6isn" path="res://Dialogues/Wardrobe.dialogue" id="12_37s47"]
-[ext_resource type="Resource" uid="uid://d1sdgtk0mutf2" path="res://Dialogues/desk.dialogue" id="14_bt5mj"]
-[ext_resource type="Texture2D" uid="uid://xh14tbuk5423" path="res://assets/roomObjects/wardrobeTop.png" id="14_e1j6l"]
 [ext_resource type="Script" uid="uid://br1ui7iqugiyd" path="res://scripts/SlowlyRotate.gd" id="16_ca42v"]
 [ext_resource type="Texture2D" uid="uid://crkosvmjaea04" path="res://assets/Balatro.png" id="21_37s47"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
-size = Vector2(775, 16.34703)
+size = Vector2(775, 8.69403)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dinhu"]
-size = Vector2(33.2419, 43.87493)
+size = Vector2(88.5012, 42.0357)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvpfn"]
-size = Vector2(86.5, 19)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sww3w"]
-size = Vector2(43.516655, 60.674873)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_suyxu"]
-size = Vector2(55, 97)
+size = Vector2(86.5, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_37s47"]
-size = Vector2(54.6823, 33.4285)
+size = Vector2(54.682304, 33.428482)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bt5mj"]
-size = Vector2(41, 30)
+size = Vector2(26, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
-size = Vector2(40.1493, 21.6517)
+size = Vector2(40.14931, 21.651741)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5newe"]
-size = Vector2(13, 4.5)
+size = Vector2(27, 3)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_trtic"]
+load_path = "res://.godot/imported/wardrobe.png-9c13143f51a06395ac6702c07b010198.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ca42v"]
-size = Vector2(73.8229, 34.857)
+size = Vector2(73.82289, 34.857048)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rysoc"]
-size = Vector2(92.25, 138)
+size = Vector2(79.25, 103)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvuet"]
-size = Vector2(96.703705, 69.58685)
+size = Vector2(78.03213, 55.301178)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trtic"]
 size = Vector2(271, 146)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ir15t"]
-size = Vector2(61.6223, 130.383)
+size = Vector2(61.622284, 130.38261)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtaks"]
 size = Vector2(120.016, 95.1429)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gee14"]
-size = Vector2(145, 266.708)
+size = Vector2(145, 241.9998)
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_37s47")
@@ -93,7 +84,7 @@ position = Vector2(9.00003, -306)
 shape = SubResource("RectangleShape2D_iywne")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="habitacion"]
-position = Vector2(401, -53)
+position = Vector2(395, -55)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_iywne")
 
@@ -103,11 +94,11 @@ rotation = 1.5708
 shape = SubResource("RectangleShape2D_iywne")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="habitacion"]
-position = Vector2(4.9999995, 310)
+position = Vector2(5.00003, 311)
 shape = SubResource("RectangleShape2D_iywne")
 
 [node name="hamster" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
-position = Vector2(203, -166)
+position = Vector2(324, -159)
 gravity_scale = 0.0
 script = ExtResource("2_p57ef")
 collison_area = NodePath("image/Area2D")
@@ -131,49 +122,16 @@ script = ExtResource("5_0tnpc")
 ui = NodePath("../outline")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hamster/image/Area2D"]
-position = Vector2(0.5, 8.072887)
-scale = Vector2(0.772118, 1.1666701)
+position = Vector2(-1.16667, 2.47916)
+scale = Vector2(0.772118, 1.16667)
 shape = SubResource("RectangleShape2D_dinhu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hamster"]
-position = Vector2(-26, -25.5)
+position = Vector2(-26, -30.5)
 shape = SubResource("RectangleShape2D_kvpfn")
 
-[node name="mirror" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
-position = Vector2(411, -236)
-gravity_scale = 0.0
-script = ExtResource("2_p57ef")
-collison_area = NodePath("image/Area2D")
-dialogue = ExtResource("7_qnb83")
-
-[node name="image" type="Sprite2D" parent="mirror"]
-z_index = 5
-position = Vector2(-28, -49)
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("7_bhx41")
-
-[node name="outline" type="Sprite2D" parent="mirror/image"]
-visible = false
-z_index = -1
-position = Vector2(1.14441e-05, 0.333336)
-texture = ExtResource("8_qnb83")
-
-[node name="Area2D" type="Area2D" parent="mirror/image" node_paths=PackedStringArray("ui")]
-collision_mask = 2
-script = ExtResource("5_0tnpc")
-ui = NodePath("../outline")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mirror/image/Area2D"]
-position = Vector2(-0.7999878, 26.20623)
-scale = Vector2(0.772118, 1.1666697)
-shape = SubResource("RectangleShape2D_sww3w")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mirror"]
-position = Vector2(-31.5, -55.5)
-shape = SubResource("RectangleShape2D_suyxu")
-
 [node name="tijeras" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
-z_index = 1
+z_index = 12
 position = Vector2(268, 393)
 gravity_scale = 0.0
 script = ExtResource("2_p57ef")
@@ -198,12 +156,12 @@ script = ExtResource("5_0tnpc")
 ui = NodePath("../outline")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tijeras/image/Area2D"]
-position = Vector2(4.66666, -4)
-scale = Vector2(0.772118, 1.16667)
+position = Vector2(4.6666627, -4.000003)
+scale = Vector2(0.772118, 1.1666701)
 shape = SubResource("RectangleShape2D_37s47")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tijeras"]
-position = Vector2(-27.5, -36)
+position = Vector2(-23, -49)
 shape = SubResource("RectangleShape2D_bt5mj")
 
 [node name="grapadora" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
@@ -231,26 +189,26 @@ script = ExtResource("5_0tnpc")
 ui = NodePath("../outline")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="grapadora/image/Area2D"]
-position = Vector2(5.83333, -7.36978)
-scale = Vector2(0.772118, 1.16667)
+position = Vector2(5.833332, -7.3697815)
+scale = Vector2(0.772118, 1.1666701)
 shape = SubResource("RectangleShape2D_1kice")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="grapadora"]
-position = Vector2(47.5, 58.75)
+position = Vector2(-27, 35)
 shape = SubResource("RectangleShape2D_5newe")
 
 [node name="wardrobe" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
-z_index = 1
 position = Vector2(562, 27)
 gravity_scale = 0.0
 script = ExtResource("2_p57ef")
 collison_area = NodePath("image/Area2D")
-dialogue = ExtResource("12_37s47")
+dialogue = ExtResource("3_vtaks")
 
 [node name="image" type="Sprite2D" parent="wardrobe"]
+z_index = 5
 position = Vector2(-28, -36)
 scale = Vector2(3, 3)
-texture = ExtResource("13_bt5mj")
+texture = SubResource("CompressedTexture2D_trtic")
 
 [node name="outline" type="Sprite2D" parent="wardrobe/image"]
 visible = false
@@ -264,17 +222,12 @@ script = ExtResource("5_0tnpc")
 ui = NodePath("../outline")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wardrobe/image/Area2D"]
-position = Vector2(-10.3333, 37)
-scale = Vector2(0.772118, 1.16667)
+position = Vector2(-10.333328, 37.000008)
+scale = Vector2(0.772118, 1.1666701)
 shape = SubResource("RectangleShape2D_ca42v")
 
-[node name="Sprite2D" type="Sprite2D" parent="wardrobe/image"]
-z_index = 11
-z_as_relative = false
-texture = ExtResource("14_e1j6l")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wardrobe"]
-position = Vector2(-24.125, 72)
+position = Vector2(-32.625, 73)
 shape = SubResource("RectangleShape2D_rysoc")
 
 [node name="desk" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
@@ -282,7 +235,7 @@ position = Vector2(48, 282)
 gravity_scale = 0.0
 script = ExtResource("2_p57ef")
 collison_area = NodePath("image/Area2D")
-dialogue = ExtResource("14_bt5mj")
+dialogue = ExtResource("3_vtaks")
 
 [node name="image" type="Sprite2D" parent="desk"]
 z_index = 5
@@ -302,7 +255,7 @@ script = ExtResource("5_0tnpc")
 ui = NodePath("../outline")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="desk/image/Area2D"]
-position = Vector2(-26.666668, -7.740883)
+position = Vector2(-19.458336, 0.592453)
 scale = Vector2(0.772118, 1.1666701)
 shape = SubResource("RectangleShape2D_kvuet")
 
@@ -317,8 +270,9 @@ position = Vector2(-6.5, 44)
 shape = SubResource("RectangleShape2D_trtic")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="desk"]
-position = Vector2(-130.008, -99.9795)
-rotation = -0.855292
+position = Vector2(-130.0081, -99.97954)
+rotation = -0.8552921
+scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_ir15t")
 
 [node name="cama" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
@@ -345,17 +299,16 @@ script = ExtResource("5_0tnpc")
 ui = NodePath("../BedOutline")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cama/Bed/Area2D"]
-position = Vector2(-11.999999, 2.6666675)
+position = Vector2(-3.33332, 3.16667)
 scale = Vector2(0.772118, 1.16667)
 shape = SubResource("RectangleShape2D_vtaks")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cama"]
-position = Vector2(-27.5, 18.6458)
+position = Vector2(-27.5, 30.9999)
 shape = SubResource("RectangleShape2D_gee14")
 
 [node name="player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 10
-y_sort_enabled = true
 position = Vector2(196, 69)
 scale = Vector2(6, 5.566)
 
@@ -364,10 +317,10 @@ position = Vector2(-2, -14)
 position_smoothing_enabled = true
 
 [node name="fondo" type="Sprite2D" parent="."]
-modulate = Color(0.224023, 0.142732, 0.442032, 0.701961)
+modulate = Color(0.2240232, 0.14273188, 0.44203168, 0.7019608)
 z_index = -1
-position = Vector2(196.50006, -62.000015)
-scale = Vector2(9.895833, 15.537036)
+position = Vector2(225.00003, -117.999954)
+scale = Vector2(9.334865, 11.927372)
 texture = ExtResource("21_37s47")
 script = ExtResource("16_ca42v")
 rotationAmount = 0.05
