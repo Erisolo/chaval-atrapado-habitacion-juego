@@ -1,0 +1,7 @@
+~ start
+Hey! It's you! Say hi!
+- Say hi
+	You won't answer you, but I bet you feel great.
+- Don't say hi
+	Or don't. I can't tell you what to do, I guess
+=> END

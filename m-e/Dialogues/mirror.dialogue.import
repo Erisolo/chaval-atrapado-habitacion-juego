@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ctwaddt8kbyn0"
+path="res://.godot/imported/mirror.dialogue-fa030246a72b832405b88790bf5a8936.tres"
+
+[deps]
+
+source_file="res://Dialogues/mirror.dialogue"
+dest_files=["res://.godot/imported/mirror.dialogue-fa030246a72b832405b88790bf5a8936.tres"]
+
+[params]
+
+defaults=true
