@@ -145,7 +145,6 @@ shape = SubResource("RectangleShape2D_kvpfn")
 
 [node name="Door" parent="." instance=ExtResource("27_qnb83")]
 position = Vector2(372, -206)
-Hpositions = Array[Vector2]([Vector2(355, -200)])
 
 [node name="mirror" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
 position = Vector2(557, -254)

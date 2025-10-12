@@ -1,13 +1,13 @@
-extends Label
+extends Area2D
 
 @export var new_scene: String
 
-signal changeScene
+signal win
 
-func _on_visibility_changed() -> void:
-	print(visible)
-	if(visible == true):
-		get_tree().paused = true
-		await get_tree().create_timer(2.0).timeout
-		get_tree().paused = false
-		SceneManager.changeScene("res://scenes/game.tscn")
+
+func _ready() -> void:
+	body_entered.connect(_on_body_entered)
+	
+func _on_body_entered(body: Node2D) -> void:
+	win.emit()
+	SceneManager.changeScene("res://scenes/game.tscn")
