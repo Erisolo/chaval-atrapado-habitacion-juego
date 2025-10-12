@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://laniajpobv6"]
+
+[ext_resource type="Script" uid="uid://ctww5ekh288a7" path="res://scripts/FadeOut.gd" id="1_gx6vt"]
+[ext_resource type="Texture2D" uid="uid://cnalhw1pfllc1" path="res://assets/roomObjects/door.png" id="1_qfj2i"]
+[ext_resource type="Texture2D" uid="uid://463auo3kalqn" path="res://assets/roomObjects/doorOutline.png" id="2_gx6vt"]
+[ext_resource type="Script" uid="uid://bowplt6ima3r0" path="res://scripts/ShowUI.gd" id="3_iv2is"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iv2is"]
+size = Vector2(74, 23)
+
+[node name="Door" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_gx6vt")
+Vpositions = Array[Vector2]([Vector2(576, 221), Vector2(576, 350)])
+Hpositions = Array[Vector2]([Vector2(355, -200), Vector2(512, -200)])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 16)
+shape = SubResource("RectangleShape2D_iv2is")
+
+[node name="Sprite2D" type="Sprite2D" parent="." node_paths=PackedStringArray("ui", "area")]
+z_index = 2
+position = Vector2(0.499996, -71)
+scale = Vector2(2.10938, 2.15625)
+texture = ExtResource("1_qfj2i")
+script = ExtResource("3_iv2is")
+ui = NodePath("Sprite2D2")
+area = NodePath("..")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+z_as_relative = false
+scale = Vector2(1, 1)
+texture = ExtResource("2_gx6vt")

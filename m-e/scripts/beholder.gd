@@ -12,7 +12,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if isWatching && Input.is_action_pressed("Up") && !iSawYou:
-		changeScene.emit("res://scenes/minigame_testing.tscn")
+		SceneManager.changeScene("res://scenes/minigame_testing.tscn")
 		iSawYou = true
 
 func changeActiveWatching() -> void:
