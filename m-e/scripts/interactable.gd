@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends Node2D
 @export var collison_area: Area2D
 var isIn = false
 @export var dialogue : DialogueResource

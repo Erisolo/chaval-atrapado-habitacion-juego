@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://fb6ikft604nq"]
+[gd_scene load_steps=8 format=3 uid="uid://dnyn2hh01hxbr"]
 
-[ext_resource type="PackedScene" uid="uid://fcf4rg1jdug0" path="res://prefabs/hamster_hand.tscn" id="1_0v1a8"]
-[ext_resource type="Script" path="res://scripts/StepOnMinigame.gd" id="1_owwkn"]
-[ext_resource type="PackedScene" path="res://prefabs/beholder.tscn" id="2_0qdjn"]
-[ext_resource type="PackedScene" path="res://prefabs/hamster_cage.tscn" id="2_i7qf2"]
+[ext_resource type="PackedScene" path="res://prefabs/hamster_hand.tscn" id="1_0v1a8"]
+[ext_resource type="Script" uid="uid://b4x55gdohios8" path="res://scripts/StepOnMinigame.gd" id="1_owwkn"]
+[ext_resource type="PackedScene" uid="uid://djim5rfxwrvx2" path="res://prefabs/beholder.tscn" id="2_0qdjn"]
+[ext_resource type="PackedScene" uid="uid://bsn2f87gsn6h2" path="res://prefabs/hamster_cage.tscn" id="2_i7qf2"]
 [ext_resource type="Script" uid="uid://bowplt6ima3r0" path="res://scripts/ShowUI.gd" id="3_d2j4i"]
-[ext_resource type="Script" path="res://scripts/ChangeSceneOnVisible.gd" id="6_owwkn"]
+[ext_resource type="Script" uid="uid://4kpbq53svndu" path="res://scripts/ChangeSceneOnVisible.gd" id="6_owwkn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0qdjn"]
 font_size = 128
@@ -21,7 +21,7 @@ offset_left = -41.0
 offset_top = 232.0
 offset_right = -1.0
 offset_bottom = 272.0
-scale = Vector2(2.7894704, 6.250495)
+scale = Vector2(2.78947, 6.25049)
 
 [node name="RigidBody2D" parent="." instance=ExtResource("1_0v1a8")]
 position = Vector2(2, 413)

@@ -8,6 +8,10 @@ var hamsterDialogue = preload("res://Dialogues/HamsterDilogues.dialogue")
 # InsideYou route assets
 var stomachAcheArea = preload("res://prefabs/stomach_ache.tscn")
 var insideYouDialogue = preload("res://Dialogues/InsideYouDialogues.dialogue")
+var pillSprite = preload("res://assets/roomObjects/pills.png")
+var pillOutline = preload("res://assets/roomObjects/pillsOutline.png")
+var pillDialogue = preload("res://Dialogues/InsideYouDialogues.dialogue")
+var mirrorDialogue = preload("res://Dialogues/mirror.dialogue")
 
 func _ready() -> void:
 	Checklist.ChoreAdded.connect(_add_chore_listener)
@@ -32,6 +36,7 @@ func _process(delta: float) -> void:
 
 # Siento mucho lo que voy a hacer aquí
 func _manage_step(chore: Chore):
+	var grappler = $grapadora
 	if chore.name == "Hamster":
 		var hamster = $hamster
 		if chore.currentStep == 0:
@@ -52,6 +57,29 @@ func _manage_step(chore: Chore):
 				area.global_position = Vector2(330, 150)
 				add_child(area)
 	elif chore.name == "InsideYou":
+		var teeth = $Teeth
+		var mirror = $mirror
+		var scissors = $tijeras
 		if chore.currentStep == 0:
 			DialogueManager.show_dialogue_balloon(insideYouDialogue)
-			# Hacer que los dientes sean pastillas
+			var sprite = $Teeth/Sprite2D
+			var outline = $Teeth/Sprite2D/Sprite2D
+			teeth.dialogueStartPoint = "Pills"
+			sprite.texture = pillSprite
+			outline.texture = pillOutline
+		elif chore.currentStep == 1:
+			remove_child(teeth)
+			DialogueManager.show_dialogue_balloon(insideYouDialogue, "StillHurts")
+			mirror.dialogue = insideYouDialogue
+			mirror.dialogueStartPoint = "Mirror"
+		elif chore.currentStep == 2:
+			mirror.dialogue = mirrorDialogue
+			mirror.dialogueStartPoint = "start"
+			scissors.dialogue = insideYouDialogue
+			scissors.dialogueStartPoint = "Scissors"
+			DialogueManager.show_dialogue_balloon(insideYouDialogue, "MirrorChecked")
+		elif chore.currentStep == 3:
+			scissors.dialogueStartPoint = "NormalScissors"
+			grappler.dialogueStartPoint = "BellyWound"
+		elif chore.currentStep == 4:
+			grappler.dialogueStartPoint = "start"

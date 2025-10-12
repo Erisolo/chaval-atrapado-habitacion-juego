@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://ch8p6p3kq2miy"]
+
+[ext_resource type="Texture2D" uid="uid://d3an2ofwdfrj0" path="res://assets/roomObjects/teeth.png" id="1_311rf"]
+[ext_resource type="Script" uid="uid://s8ui1ipxnhdr" path="res://scripts/interactable.gd" id="1_tejlr"]
+[ext_resource type="Resource" uid="uid://bbcsjj8saqikr" path="res://Dialogues/InsideYouDialogues.dialogue" id="2_5lmky"]
+[ext_resource type="Script" uid="uid://bowplt6ima3r0" path="res://scripts/ShowUI.gd" id="2_tejlr"]
+[ext_resource type="Texture2D" uid="uid://bp65pifgrfwhb" path="res://assets/roomObjects/teethOutline.png" id="3_5lmky"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k1t4"]
+size = Vector2(68, 60)
+
+[node name="Area2D" type="Area2D" node_paths=PackedStringArray("collison_area")]
+collision_mask = 2
+script = ExtResource("1_tejlr")
+collison_area = NodePath(".")
+dialogue = ExtResource("2_5lmky")
+dialogueStartPoint = "NormalTeeth"
+
+[node name="Sprite2D" type="Sprite2D" parent="." node_paths=PackedStringArray("ui", "area")]
+z_index = 2
+position = Vector2(-6.875, 7)
+scale = Vector2(2.43519, 2.41667)
+texture = ExtResource("1_311rf")
+script = ExtResource("2_tejlr")
+ui = NodePath("Sprite2D")
+area = NodePath("..")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+visible = false
+z_as_relative = false
+texture = ExtResource("3_5lmky")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_7k1t4")

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=42 format=3 uid="uid://dqih7xgvju7to"]
-=======
-[gd_scene load_steps=46 format=3 uid="uid://dqih7xgvju7to"]
->>>>>>> refs/remotes/origin/main
+[gd_scene load_steps=49 format=3 uid="uid://dqih7xgvju7to"]
 
 [ext_resource type="Script" uid="uid://cyhr8s18ujl2l" path="res://scripts/ChoreManager.gd" id="1_37s47"]
 [ext_resource type="PackedScene" uid="uid://cyyjelwi3nonx" path="res://prefabs/player.tscn" id="1_uwrxv"]
@@ -28,12 +24,14 @@
 [ext_resource type="Texture2D" uid="uid://cn2wbc51mjrbb" path="res://assets/roomObjects/scissorsOutline.png" id="11_37s47"]
 [ext_resource type="Resource" uid="uid://cgacmgkwydylu" path="res://Dialogues/BedDialogue.dialogue" id="11_trtic"]
 [ext_resource type="Resource" uid="uid://ymk84x0a6isn" path="res://Dialogues/Wardrobe.dialogue" id="12_37s47"]
+[ext_resource type="Resource" uid="uid://bbcsjj8saqikr" path="res://Dialogues/InsideYouDialogues.dialogue" id="12_wljb1"]
 [ext_resource type="Texture2D" uid="uid://dj21fvpfxaf31" path="res://assets/roomObjects/wardrobe.png" id="13_bt5mj"]
 [ext_resource type="Resource" uid="uid://d1sdgtk0mutf2" path="res://Dialogues/desk.dialogue" id="14_bt5mj"]
 [ext_resource type="Texture2D" uid="uid://xh14tbuk5423" path="res://assets/roomObjects/wardrobeTop.png" id="14_e1j6l"]
 [ext_resource type="Script" uid="uid://br1ui7iqugiyd" path="res://scripts/SlowlyRotate.gd" id="16_ca42v"]
 [ext_resource type="Texture2D" uid="uid://crkosvmjaea04" path="res://assets/Balatro.png" id="21_37s47"]
 [ext_resource type="PackedScene" uid="uid://laniajpobv6" path="res://prefabs/door.tscn" id="27_qnb83"]
+[ext_resource type="PackedScene" uid="uid://ch8p6p3kq2miy" path="res://prefabs/Teeth.tscn" id="31_qouja"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
 size = Vector2(775, 8.69403)
@@ -45,7 +43,7 @@ size = Vector2(49.2153, 42.8928)
 size = Vector2(86.5, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sww3w"]
-size = Vector2(52.84166, 51.485603)
+size = Vector2(52.8417, 51.4856)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_suyxu"]
 size = Vector2(44, 98)
@@ -145,12 +143,12 @@ shape = SubResource("RectangleShape2D_dinhu")
 position = Vector2(-26, -30.5)
 shape = SubResource("RectangleShape2D_kvpfn")
 
-<<<<<<< HEAD
 [node name="Door" parent="." instance=ExtResource("27_qnb83")]
 position = Vector2(372, -206)
-=======
+Hpositions = Array[Vector2]([Vector2(355, -200)])
+
 [node name="mirror" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
-position = Vector2(447, -251)
+position = Vector2(557, -254)
 gravity_scale = 0.0
 script = ExtResource("2_p57ef")
 collison_area = NodePath("image/Area2D")
@@ -174,14 +172,13 @@ script = ExtResource("5_0tnpc")
 ui = NodePath("../outline")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mirror/image/Area2D"]
-position = Vector2(-1.5999908, 20)
-scale = Vector2(0.772118, 1.1666697)
+position = Vector2(-1.59999, 20)
+scale = Vector2(0.772118, 1.16667)
 shape = SubResource("RectangleShape2D_sww3w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mirror"]
 position = Vector2(-28, -26)
 shape = SubResource("RectangleShape2D_suyxu")
->>>>>>> refs/remotes/origin/main
 
 [node name="tijeras" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
 z_index = 12
@@ -189,7 +186,8 @@ position = Vector2(268, 393)
 gravity_scale = 0.0
 script = ExtResource("2_p57ef")
 collison_area = NodePath("image/Area2D")
-dialogue = ExtResource("3_vtaks")
+dialogue = ExtResource("12_wljb1")
+dialogueStartPoint = "NormalScissors"
 
 [node name="image" type="Sprite2D" parent="tijeras"]
 z_index = 5
@@ -381,3 +379,6 @@ scale = Vector2(9.33486, 11.9274)
 texture = ExtResource("21_37s47")
 script = ExtResource("16_ca42v")
 rotationAmount = 0.05
+
+[node name="Teeth" parent="." instance=ExtResource("31_qouja")]
+position = Vector2(227, 92)

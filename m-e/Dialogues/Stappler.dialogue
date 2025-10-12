@@ -6,3 +6,12 @@ Stappler: [[Hi|Hello|Howdy|Hi there|Hey]], what's going on dude?
 - Try to stapple something
 	But there's nothing to stapple. Sadly
 => END
+~ BellyWound
+Stappler: Hey pal, something I can help you with?
+- Say nothing
+	Stappler: I'm here if you need me, dude
+- Try to stapple something
+	You stapple your open wound
+	Stappler: Glad to help!
+do Checklist.getChore("InsideYou").finishCurrentStep()
+=> END
