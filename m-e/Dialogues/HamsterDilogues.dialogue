@@ -6,12 +6,12 @@
 do Checklist.addChore("Hamster",["Find food for Mr Nugget", "Feed Mr Nugget", "Check what's wrong with Mr Nugget", ""])
 => END
 ~ HamsterFeed
-You: Ok... time to feed you Mr Nugget. Don't be a bad boy.
+Let's feed Mr.Nugget. Let's just hope its not like [shake] last [/shake] time.
 do SceneManager.changeScene("res://scenes/minigame_testing.tscn")
 => END
 ~ HamsterFood
 You found food for Mr Nugget!
-You: weird, I haven't seen this here before
+Weird, you didn't see it before. You're so absent-minded.
 do Checklist.getChore("Hamster").finishCurrentStep()
 => END
 ~ ExitHamsterFeedMinigame
@@ -42,5 +42,5 @@ It tasted like an iron bar
 => END
 ~ NoHamster
 Mr Nugget used to be here
-Now its in your belly... YUM
+Now he's in your belly... YUM
 => END

@@ -31,7 +31,7 @@
 [ext_resource type="Script" uid="uid://br1ui7iqugiyd" path="res://scripts/SlowlyRotate.gd" id="16_ca42v"]
 [ext_resource type="Texture2D" uid="uid://crkosvmjaea04" path="res://assets/Balatro.png" id="21_37s47"]
 [ext_resource type="PackedScene" uid="uid://laniajpobv6" path="res://prefabs/door.tscn" id="27_qnb83"]
-[ext_resource type="PackedScene" uid="uid://ch8p6p3kq2miy" path="res://prefabs/Teeth.tscn" id="31_qouja"]
+[ext_resource type="PackedScene" path="res://prefabs/Teeth.tscn" id="31_qouja"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
 size = Vector2(775, 8.69403)
@@ -55,7 +55,7 @@ size = Vector2(54.6823, 33.4285)
 size = Vector2(26, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
-size = Vector2(40.1493, 21.6517)
+size = Vector2(34.105312, 21.6517)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5newe"]
 size = Vector2(27, 3)
@@ -239,8 +239,8 @@ script = ExtResource("5_0tnpc")
 ui = NodePath("../outline")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="grapadora/image/Area2D"]
-position = Vector2(5.83333, -7.36978)
-scale = Vector2(0.772118, 1.16667)
+position = Vector2(8.166668, -7.3697815)
+scale = Vector2(0.772118, 1.1666701)
 shape = SubResource("RectangleShape2D_1kice")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="grapadora"]
@@ -370,14 +370,15 @@ scale = Vector2(6, 5.566)
 position = Vector2(-2, -14)
 position_smoothing_enabled = true
 
+[node name="Teeth" parent="." instance=ExtResource("31_qouja")]
+position = Vector2(227, 92)
+
 [node name="fondo" type="Sprite2D" parent="."]
 modulate = Color(0.224023, 0.142732, 0.442032, 0.701961)
 z_index = -1
-position = Vector2(217, -110)
-scale = Vector2(9.33486, 11.9274)
+z_as_relative = false
+position = Vector2(215, 24)
+scale = Vector2(15.041666, 19.918518)
 texture = ExtResource("21_37s47")
 script = ExtResource("16_ca42v")
 rotationAmount = 0.05
-
-[node name="Teeth" parent="." instance=ExtResource("31_qouja")]
-position = Vector2(227, 92)

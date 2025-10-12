@@ -17,7 +17,8 @@ func showChores():
 	checknote.visible = true
 	var _text = ""
 	for i in Checklist.chores:
-		_text += i.steps[i.currentStep] + "\n"
+		if i.currentStep < i.steps.size() :
+			_text += i.steps[i.currentStep] + "\n"
 	label.text = _text
 	animationplayer.play("jump_in")
 	await animationplayer.animation_finished

@@ -1,37 +1,40 @@
 ~ start
-BLUORRRRRRRRRP
-your stomach seems to hurt
-maybe you should take your pills
+[shake]*BLUORRRRRRRRRP*[shake]
+Your stomach hurts. Again.
+Maybe you should take your pills.
 => END
 ~ NormalScissors
-Just a pair of scissors
-Quite sharp
+Just a pair of scissors.
+Quite sharp.
 => END
 ~ NormalTeeth
-A bunch of teeth
-Maybe they are yours
-No need to check
+A bunch of teeth.
+Maybe they are yours.
+No need to check.
 => END
 ~ Pills
-Your pills
-You take them
-do Checklist.getChore("InsideYou").finishCurrentStep()
+Your pills.
+- Take them
+	do Checklist.getChore("InsideYou").finishCurrentStep()
+- Leave them
+	Yeah, refuse help. That'll show 'em.
 => END
 ~ StillHurts
-It still hurts
-There was something more useless than you after all
+It still hurts.
+There was something more useless than you after all.
 => END
 ~ Mirror
 Something's off
 do SceneManager.changeScene("res://scenes/mirror_scene.tscn")
 => END
 ~ MirrorChecked
-I recommend you not to let that thing be inside you
-I think you should take it out
+Um. Yeah you shouldn't let that thing be inside you.
+I think you should take it out.
 => END
 ~ Scissors
-You push the scissors right into your belly
-You find some slimy rope
-Just shove it back inside
+You push the scissors right into your belly.
+You find some slimy rope.
+Just shove it back inside.
+Turns out there was no one inside you all along. That's a relief.
 do Checklist.getChore("InsideYou").finishCurrentStep()
 => END

@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsn2f87gsn6h2"]
+[gd_scene load_steps=4 format=3 uid="uid://dwqavy541s5hg"]
 
-[ext_resource type="Texture2D" uid="uid://lh1ucf64nomu" path="res://assets/square.jpg" id="1_4g364"]
+[ext_resource type="Texture2D" uid="uid://cetnmshop5y67" path="res://assets/hamster-food.png" id="1_4g364"]
 
 [sub_resource type="GDScript" id="GDScript_4g364"]
 script/source = "extends Area2D
@@ -26,6 +26,6 @@ script = SubResource("GDScript_4g364")
 shape = SubResource("CircleShape2D_4g364")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2.38419e-07, -2.1684e-19)
-scale = Vector2(0.0775, 0.0826312)
+position = Vector2(-6.411998, -5.4069967)
+scale = Vector2(2.418296, 2.495016)
 texture = ExtResource("1_4g364")
