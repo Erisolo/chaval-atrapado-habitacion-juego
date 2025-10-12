@@ -56,12 +56,15 @@ func _manage_step(chore: Chore):
 				var area = stomachAcheArea.instantiate()
 				area.global_position = Vector2(330, 150)
 				add_child(area)
+			chore.finishCurrentStep()
 	elif chore.name == "InsideYou":
 		var teeth = $Teeth
 		var mirror = $mirror
 		var scissors = $tijeras
 		if chore.currentStep == 0:
 			DialogueManager.show_dialogue_balloon(insideYouDialogue)
+			var area = $stomach_ache
+			remove_child(area)
 			var sprite = $Teeth/Sprite2D
 			var outline = $Teeth/Sprite2D/Sprite2D
 			teeth.dialogueStartPoint = "Pills"
@@ -83,3 +86,4 @@ func _manage_step(chore: Chore):
 			grappler.dialogueStartPoint = "BellyWound"
 		elif chore.currentStep == 4:
 			grappler.dialogueStartPoint = "start"
+			chore.finishCurrentStep()
