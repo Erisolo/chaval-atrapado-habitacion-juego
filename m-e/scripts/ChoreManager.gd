@@ -99,9 +99,8 @@ func _manage_step(chore: Chore):
 			scissors.dialogueStartPoint = "NormalScissors"
 			grappler.dialogueStartPoint = "BellyWound"
 		elif chore.currentStep == 4:
-			grappler.dialogueStartPoint = "start"
-			chore.finishCurrentStep()
 			changeStapplerDialogue("InsideYou4")
+			chore.finishCurrentStep()
 			numChores -= 1
 			check_num_chores()
 	elif chore.name == "Photos":
