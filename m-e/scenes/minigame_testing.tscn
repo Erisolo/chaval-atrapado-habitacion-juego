@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://fb6ikft604nq"]
+[gd_scene load_steps=9 format=3 uid="uid://dnyn2hh01hxbr"]
 
-[ext_resource type="PackedScene" uid="uid://fcf4rg1jdug0" path="res://prefabs/hamster_hand.tscn" id="1_0v1a8"]
-[ext_resource type="Script" path="res://scripts/StepOnMinigame.gd" id="1_owwkn"]
-[ext_resource type="PackedScene" path="res://prefabs/beholder.tscn" id="2_0qdjn"]
-[ext_resource type="PackedScene" path="res://prefabs/hamster_cage.tscn" id="2_i7qf2"]
+[ext_resource type="PackedScene" path="res://prefabs/hamster_hand.tscn" id="1_0v1a8"]
+[ext_resource type="Script" uid="uid://b4x55gdohios8" path="res://scripts/StepOnMinigame.gd" id="1_owwkn"]
+[ext_resource type="PackedScene" uid="uid://djim5rfxwrvx2" path="res://prefabs/beholder.tscn" id="2_0qdjn"]
+[ext_resource type="PackedScene" uid="uid://bsn2f87gsn6h2" path="res://prefabs/hamster_cage.tscn" id="2_i7qf2"]
 [ext_resource type="Script" uid="uid://bowplt6ima3r0" path="res://scripts/ShowUI.gd" id="3_d2j4i"]
-[ext_resource type="Script" path="res://scripts/ChangeSceneOnVisible.gd" id="6_owwkn"]
+[ext_resource type="Script" uid="uid://4kpbq53svndu" path="res://scripts/ChangeSceneOnVisible.gd" id="6_owwkn"]
 [ext_resource type="Texture2D" uid="uid://s2r5jatvck36" path="res://assets/fondoHamster.png" id="7_hw54x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0qdjn"]
@@ -54,14 +54,14 @@ script = ExtResource("6_owwkn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -3
-position = Vector2(10.499985, -305.49994)
-scale = Vector2(2.2441406, 2.451172)
+position = Vector2(10.5, -305.5)
+scale = Vector2(2.24414, 2.45117)
 texture = ExtResource("7_hw54x")
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
 z_index = -1
-position = Vector2(-0.11138287, -509.3482)
-scale = Vector2(1.0004352, 1)
+position = Vector2(-0.111383, -509.348)
+scale = Vector2(1.00044, 1)
 texture = ExtResource("7_hw54x")
 
 [connection signal="visibility_changed" from="RigidBody2D2/YouWin" to="RigidBody2D2/YouWin" method="_on_visibility_changed"]
