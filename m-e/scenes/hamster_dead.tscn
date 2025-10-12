@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://byvrnnwlc4fw5"]
+
+[ext_resource type="Texture2D" uid="uid://4khbpr7kq5qr" path="res://assets/HamsterDurisimo.jpg" id="1_2jkct"]
+[ext_resource type="Script" uid="uid://ba6xodbonec6" path="res://scripts/DialogueOnVisible.gd" id="1_ar83r"]
+[ext_resource type="Script" uid="uid://c64mf15olqyk" path="res://scripts/ShowInElapsedTime.gd" id="2_ar83r"]
+[ext_resource type="Resource" uid="uid://cj8xn1mntwliy" path="res://Dialogues/HamsterDilogues.dialogue" id="2_xdft4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xdft4"]
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_62atp"]
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_4utg0"]
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_mntj2"]
+font_size = 150
+
+[node name="hamster_dead" type="Node2D" node_paths=PackedStringArray("visibleNode")]
+script = ExtResource("1_ar83r")
+waitTime = 1
+dialogue = ExtResource("2_xdft4")
+startPoint = "IsYourHamsterDead"
+visibleNode = NodePath("Node2D/dead")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(548, 302)
+texture = ExtResource("1_2jkct")
+
+[node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("labels")]
+script = ExtResource("2_ar83r")
+labels = [NodePath("Is"), NodePath("your"), NodePath("Hamster"), NodePath("dead")]
+secondsBetweenLabels = 1
+
+[node name="Is" type="Label" parent="Node2D"]
+visible = false
+offset_left = 60.0
+offset_top = 19.0
+offset_right = 151.0
+offset_bottom = 156.0
+text = "IS"
+label_settings = SubResource("LabelSettings_xdft4")
+
+[node name="your" type="Label" parent="Node2D"]
+visible = false
+offset_left = 236.0
+offset_top = 19.0
+offset_right = 512.0
+offset_bottom = 156.0
+text = "YOUR"
+label_settings = SubResource("LabelSettings_62atp")
+
+[node name="Hamster" type="Label" parent="Node2D"]
+visible = false
+offset_left = 589.0
+offset_top = 21.0
+offset_right = 1054.0
+offset_bottom = 158.0
+text = "HAMSTER"
+label_settings = SubResource("LabelSettings_4utg0")
+
+[node name="dead" type="Label" parent="Node2D"]
+visible = false
+offset_left = 312.0
+offset_top = 109.0
+offset_right = 783.0
+offset_bottom = 314.0
+text = "DEAD?"
+label_settings = SubResource("LabelSettings_mntj2")

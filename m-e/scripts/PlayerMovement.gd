@@ -7,6 +7,7 @@ var dialogueActive = false
 func _ready() -> void:
 	DialogueManager.dialogue_started.connect(dialogueOn)
 	DialogueManager.dialogue_ended.connect(dialogueOff)
+	position = PlayerInfo.lastPosition
 
 
 func _physics_process(delta: float) -> void:
@@ -30,6 +31,7 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.play("idle")
 		velocity = direction * SPEED 
 		move_and_slide()
+		PlayerInfo.lastPosition = position
 	
 func dialogueOn(dialogue) -> void:
 	dialogueActive = true

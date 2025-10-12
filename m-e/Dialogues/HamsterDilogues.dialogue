@@ -3,5 +3,44 @@
  : He hasn't moved in a while.
  : maybe you should feed him, from time to time.
 #TODO empezar quest
-#do startQuest(hamster) o un indice, lo q prefieras
+do Checklist.addChore("Hamster",["Find food for Mr Nugget", "Feed Mr Nugget", "Check what's wrong with Mr Nugget", ""])
+=> END
+~ HamsterFeed
+You: Ok... time to feed you Mr Nugget. Don't be a bad boy.
+do SceneManager.changeScene("res://scenes/minigame_testing.tscn")
+=> END
+~ HamsterFood
+You found food for Mr Nugget!
+You: weird, I haven't seen this here before
+do Checklist.getChore("Hamster").finishCurrentStep()
+=> END
+~ ExitHamsterFeedMinigame
+You notice Mr Nugget is a little bit stiff
+Maybe you should check on him
+=> END
+~ CheckOnHamster
+You check on Mr Nugget
+do SceneManager.changeScene("res://scenes/hamster_dead.tscn")
+=> END
+~ IsYourHamsterDead
+Is your hamster dead?
+- NO
+	% WRONG ANSWER
+	% That thing looks totally dead
+	% Just accept that he died
+	=> IsYourHamsterDead
+- YES
+	Should you eat your hamster?
+	- TOTALLY
+	- TOTALLY
+	do Checklist.getChore("Hamster").finishCurrentStep()
+	do SceneManager.changeScene("res://scenes/game.tscn")
+=> END
+~ EatYourHamster
+*GULP*
+It tasted like an iron bar
+=> END
+~ NoHamster
+Mr Nugget used to be here
+Now its in your belly... YUM
 => END

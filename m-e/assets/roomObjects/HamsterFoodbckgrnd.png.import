@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b62brflosjeuu"
-path="res://.godot/imported/walk-side.png-53274a6676146307e49f630c55fe3980.ctex"
+uid="uid://dpa424ej1766d"
+path="res://.godot/imported/HamsterFoodbckgrnd.png-89626e62b49854d2035370f3e5cadac2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/walk-side.png"
-dest_files=["res://.godot/imported/walk-side.png-53274a6676146307e49f630c55fe3980.ctex"]
+source_file="res://assets/roomObjects/HamsterFoodbckgrnd.png"
+dest_files=["res://.godot/imported/HamsterFoodbckgrnd.png-89626e62b49854d2035370f3e5cadac2.ctex"]
 
 [params]
 

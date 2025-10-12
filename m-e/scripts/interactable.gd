@@ -2,8 +2,10 @@ extends RigidBody2D
 @export var collison_area: Area2D
 var isIn = false
 @export var dialogue : DialogueResource
-var dialogueStartPoint = "start"
+@export var dialogueStartPoint = "start"
 var dialogueActive = false
+
+signal DialogueEnded
 
 func _ready() -> void:
 	DialogueManager.dialogue_started.connect(dialogueOn)
@@ -27,3 +29,4 @@ func dialogueOn(dialogue) -> void:
 
 func dialogueOff(dialogue)-> void:
 	dialogueActive = false
+	DialogueEnded.emit()
