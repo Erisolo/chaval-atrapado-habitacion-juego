@@ -4,8 +4,10 @@
 [ext_resource type="Script" uid="uid://cksrl7mqkxiuh" path="res://scenes/ShowForSeconds.gd" id="2_i7v4k"]
 
 [node name="Sprite2D" type="Sprite2D"]
+position = Vector2(581, 323)
 scale = Vector2(0.362, 0.36042)
 texture = ExtResource("1_w6f60")
 script = ExtResource("2_i7v4k")
+seconds = 5
 Scene = "res://scenes/game.tscn"
 chore = "InsideYou"
