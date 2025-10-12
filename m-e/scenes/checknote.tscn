@@ -99,8 +99,10 @@ texture = ExtResource("1_6utm8")
 
 [node name="Label" type="Label" parent="TextureRect"]
 layout_mode = 0
-offset_right = 224.0
+offset_left = -16.0
+offset_right = 286.0369
 offset_bottom = 33.0
 scale = Vector2(1.6190073, 2.2703774)
-text = "feed your hamster"
+text = "jhjlkjlkjlkj kj"
 label_settings = SubResource("LabelSettings_vmt7e")
+autowrap_mode = 2
