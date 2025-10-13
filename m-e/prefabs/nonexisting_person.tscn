@@ -1,27 +1,60 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1i23lgo0jhld"]
+[gd_scene load_steps=10 format=3 uid="uid://db3vvj1i78anm"]
 
-[ext_resource type="Script" uid="uid://cm44gvs5hd4cw" path="res://scripts/touchable.gd" id="1_jyaje"]
+[ext_resource type="Script" path="res://scripts/touchable.gd" id="1_jyaje"]
 [ext_resource type="Texture2D" uid="uid://lh1ucf64nomu" path="res://assets/square.jpg" id="2_la1dj"]
-[ext_resource type="Texture2D" uid="uid://byr14pwlqjj8a" path="res://assets/cross.png" id="3_ae8mu"]
+[ext_resource type="Texture2D" uid="uid://b73mb10hdo7dq" path="res://assets/crossAnimation.png" id="3_klexv"]
 [ext_resource type="Script" uid="uid://cury24mvkcjvy" path="res://scripts/ShowUIOnClick.gd" id="4_ae8mu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ae8mu"]
 radius = 47.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpkp6"]
+atlas = ExtResource("3_klexv")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2xd6"]
+atlas = ExtResource("3_klexv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1iwxp"]
+atlas = ExtResource("3_klexv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gfbif"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpkp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2xd6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1iwxp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
 [node name="nonexistingPerson" type="Area2D"]
+scale = Vector2(0.3, 0.3)
 script = ExtResource("1_jyaje")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ae8mu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-4.76837e-07, 0)
 scale = Vector2(0.08375, 0.095593)
 texture = ExtResource("2_la1dj")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." node_paths=PackedStringArray("ui", "event")]
-scale = Vector2(0.0760417, 0.090625)
-texture = ExtResource("3_ae8mu")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." node_paths=PackedStringArray("ui", "event")]
+position = Vector2(1.666666, 1.6666689)
+scale = Vector2(4.479166, 5.520833)
+sprite_frames = SubResource("SpriteFrames_gfbif")
+frame_progress = 0.25304976
 script = ExtResource("4_ae8mu")
 ui = NodePath(".")
 event = NodePath("..")

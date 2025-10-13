@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://qe35yb6vv560"]
+
+[ext_resource type="Script" path="res://scripts/ResetScene.gd" id="1_bhl4a"]
+[ext_resource type="Script" uid="uid://bthilxcjbhgu8" path="res://scripts/CameraMovement.gd" id="2_tl7l3"]
+[ext_resource type="Script" path="res://scripts/PhotoFinder.gd" id="3_ebfnh"]
+[ext_resource type="PackedScene" uid="uid://db3vvj1i78anm" path="res://prefabs/nonexisting_person.tscn" id="4_rwheh"]
+[ext_resource type="Texture2D" uid="uid://d4bbbexvddyus" path="res://assets/wardrobeDoor.png" id="5_13v4a"]
+[ext_resource type="Texture2D" uid="uid://bposku8h10lme" path="res://assets/photo1.png" id="6_84wgb"]
+[ext_resource type="Texture2D" uid="uid://chu0mqf18hwgr" path="res://assets/photo2.png" id="7_intlk"]
+[ext_resource type="Texture2D" uid="uid://103hb7qkdrxu" path="res://assets/photo3.png" id="8_arx0u"]
+[ext_resource type="Texture2D" uid="uid://0tek586v75jt" path="res://assets/photo4.png" id="9_nr8aa"]
+
+[node name="photo_mini_game" type="Node2D" node_paths=PackedStringArray("finish")]
+script = ExtResource("1_bhl4a")
+finish = [NodePath("Objectives")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("2_tl7l3")
+
+[node name="Objectives" type="Node2D" parent="." node_paths=PackedStringArray("objectives")]
+z_index = 2
+script = ExtResource("3_ebfnh")
+objectives = [NodePath("nonexistingPerson"), NodePath("nonexistingPerson2"), NodePath("nonexistingPerson3")]
+
+[node name="nonexistingPerson" parent="Objectives" instance=ExtResource("4_rwheh")]
+position = Vector2(201, 152)
+
+[node name="nonexistingPerson2" parent="Objectives" instance=ExtResource("4_rwheh")]
+position = Vector2(280, -217)
+
+[node name="nonexistingPerson3" parent="Objectives" instance=ExtResource("4_rwheh")]
+position = Vector2(-225, -242)
+
+[node name="nonexistingPerson4" parent="Objectives" instance=ExtResource("4_rwheh")]
+position = Vector2(-322, 36)
+
+[node name="WardrobeDoor" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(5, 36)
+scale = Vector2(0.8787501, 1.0277778)
+texture = ExtResource("5_13v4a")
+
+[node name="Photo1" type="Sprite2D" parent="."]
+position = Vector2(-192, -186)
+rotation = -0.10928053
+scale = Vector2(1.7, 1.808)
+texture = ExtResource("6_84wgb")
+
+[node name="Photo2" type="Sprite2D" parent="."]
+position = Vector2(278, -171.00002)
+rotation = 0.23886123
+scale = Vector2(1.7, 1.808)
+texture = ExtResource("7_intlk")
+
+[node name="Photo3" type="Sprite2D" parent="."]
+position = Vector2(246, 160)
+rotation = -0.11792122
+scale = Vector2(1.7, 1.808)
+texture = ExtResource("8_arx0u")
+
+[node name="Photo4" type="Sprite2D" parent="."]
+position = Vector2(-366, 71.999985)
+rotation = 0.23871061
+scale = Vector2(1.7, 1.808)
+texture = ExtResource("9_nr8aa")
