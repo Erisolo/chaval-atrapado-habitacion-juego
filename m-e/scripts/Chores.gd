@@ -5,6 +5,7 @@ class_name Chore
 @export var name: String
 @export var steps: Array[String]
 @export var currentStep: int
+var doneOnce : Array[bool]
 
 signal stepCompleted
 

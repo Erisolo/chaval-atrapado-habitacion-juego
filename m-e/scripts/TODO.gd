@@ -12,6 +12,8 @@ func addChore(Name: String, newSteps: Array[String]):
 	chore.name = Name
 	chore.steps = newSteps
 	chore.currentStep = 0
+	chore.doneOnce.resize(newSteps.size())
+	chore.doneOnce.fill(false)
 	chores.append(chore)
 	numChores += 1
 	ChoreAdded.emit()

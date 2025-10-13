@@ -46,7 +46,7 @@ func _manage_step(chore: Chore):
 		var hamster = $hamster
 		if chore.currentStep == 0:
 			var food = hamsterFood.instantiate()
-			food.global_position = Vector2(450, 330) 
+			food.global_position = Vector2(450, 330)
 			add_child(food)
 			changeStapplerDialogue("Hamster0")
 		elif chore.currentStep == 1:
@@ -55,25 +55,31 @@ func _manage_step(chore: Chore):
 			changeStapplerDialogue("Hamster1")
 		elif chore.currentStep == 2:
 			hamster.dialogueStartPoint = "CheckOnHamster"
-			DialogueManager.show_dialogue_balloon(hamsterDialogue, "ExitHamsterFeedMinigame")
+			if !chore.doneOnce[2]:
+				DialogueManager.show_dialogue_balloon(hamsterDialogue, "ExitHamsterFeedMinigame")
+				chore.doneOnce[2] = true
 			changeStapplerDialogue("Hamster2")
 		elif chore.currentStep == 3:
 			hamster.dialogueStartPoint = "NoHamster"
-			DialogueManager.show_dialogue_balloon(hamsterDialogue, "EatYourHamster")
-			if(Checklist.getChore("InsideYou") == null):
-				var area = stomachAcheArea.instantiate()
-				area.global_position = Vector2(330, 150)
-				add_child(area)
-			chore.finishCurrentStep()
+			if !chore.doneOnce[3]:
+				DialogueManager.show_dialogue_balloon(hamsterDialogue, "EatYourHamster")
+				chore.finishCurrentStep()
+				chore.doneOnce[3] = true
+				numChores -= 1
+				check_num_chores()
+			spawnStomachArea()
 			changeStapplerDialogue("Hamster3")
-			numChores -= 1
-			check_num_chores()
+		elif chore.currentStep == 4:
+			hamster.dialogueStartPoint = "NoHamster"
+			spawnStomachArea()
 	elif chore.name == "InsideYou":
 		var teeth = $Teeth
 		var mirror = $mirror
 		var scissors = $tijeras
 		if chore.currentStep == 0:
-			DialogueManager.show_dialogue_balloon(insideYouDialogue)
+			if !chore.doneOnce[0]:
+				DialogueManager.show_dialogue_balloon(insideYouDialogue)
+				chore.doneOnce[0] = true
 			var area = $stomach_ache
 			remove_child(area)
 			var sprite = $Teeth/Sprite2D
@@ -83,26 +89,35 @@ func _manage_step(chore: Chore):
 			outline.texture = pillOutline
 			changeStapplerDialogue("InsideYou0")
 		elif chore.currentStep == 1:
+			if !chore.doneOnce[1]:
+				chore.doneOnce[1] = true
+				DialogueManager.show_dialogue_balloon(insideYouDialogue, "StillHurts")
 			remove_child(teeth)
-			DialogueManager.show_dialogue_balloon(insideYouDialogue, "StillHurts")
 			mirror.dialogue = insideYouDialogue
 			mirror.dialogueStartPoint = "Mirror"
 			changeStapplerDialogue("InsideYou1")
 		elif chore.currentStep == 2:
+			remove_child(teeth)
 			mirror.dialogue = mirrorDialogue
 			mirror.dialogueStartPoint = "start"
 			scissors.dialogue = insideYouDialogue
 			scissors.dialogueStartPoint = "Scissors"
-			DialogueManager.show_dialogue_balloon(insideYouDialogue, "MirrorChecked")
+			if !chore.doneOnce[2]:
+				DialogueManager.show_dialogue_balloon(insideYouDialogue, "MirrorChecked")
+				chore.doneOnce[2] = true
 			changeStapplerDialogue("InsideYou2")
 		elif chore.currentStep == 3:
+			remove_child(teeth)
 			scissors.dialogueStartPoint = "NormalScissors"
 			grappler.dialogueStartPoint = "BellyWound"
 		elif chore.currentStep == 4:
-			changeStapplerDialogue("InsideYou4")
-			chore.finishCurrentStep()
-			numChores -= 1
-			check_num_chores()
+			if !chore.doneOnce[4]:
+				chore.finishCurrentStep()
+				numChores -= 1
+				check_num_chores()
+				chore.doneOnce[4] = true
+			remove_child(teeth)
+			grappler.dialogueStartPoint = "InsideYou4"
 	elif chore.name == "Photos":
 		var wardrobe = $wardrobe
 		if chore.currentStep == 0:
@@ -110,18 +125,24 @@ func _manage_step(chore: Chore):
 		elif chore.currentStep == 1:
 			changeStapplerDialogue("Photos1")
 			wardrobe.dialogueStartPoint = "CheckAgain"
-			DialogueManager.show_dialogue_balloon(photosDialogue, "Solved")
+			if !chore.doneOnce[1]:
+				DialogueManager.show_dialogue_balloon(photosDialogue, "Solved")
+				chore.doneOnce[1] = true
 		elif chore.currentStep == 2:
 			changeStapplerDialogue("Photos2")
 			wardrobe.dialogueStartPoint = "CheckAgainAgain"
-			DialogueManager.show_dialogue_balloon(photosDialogue, "Solved")
+			if !chore.doneOnce[2]:
+				DialogueManager.show_dialogue_balloon(photosDialogue, "Solved")
+				chore.doneOnce[2] = true
 		elif chore.currentStep == 3:
 			changeStapplerDialogue("Photos3")
 			wardrobe.dialogueStartPoint = "Wardrobe"
-			DialogueManager.show_dialogue_balloon(photosDialogue, "AllSolved")
-			chore.finishCurrentStep()
-			numChores -= 1
-			check_num_chores()
+			if !chore.doneOnce[1]:
+				DialogueManager.show_dialogue_balloon(photosDialogue, "AllSolved")
+				chore.doneOnce[3] = true
+				chore.finishCurrentStep()
+				numChores -= 1
+				check_num_chores()
 
 func check_num_chores():
 	if numChores == 2:
@@ -138,3 +159,9 @@ func changeStapplerDialogue(newDialogue: String):
 	var stappler = $grapadora
 	if stappler.dialogueStartPoint != "BellyWound":
 		stappler.dialogueStartPoint = newDialogue
+		
+func spawnStomachArea():
+	if(Checklist.getChore("InsideYou") == null):
+		var area = stomachAcheArea.instantiate()
+		area.global_position = Vector2(330, 150)
+		add_child(area)
