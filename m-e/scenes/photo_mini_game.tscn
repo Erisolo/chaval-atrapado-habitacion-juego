@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://blt7it0a3tas8"]
+[gd_scene load_steps=10 format=3 uid="uid://blt7it0a3tas8"]
 
 [ext_resource type="Script" uid="uid://bthilxcjbhgu8" path="res://scripts/CameraMovement.gd" id="1_4s37h"]
 [ext_resource type="Script" path="res://scripts/ResetScene.gd" id="1_lityx"]
@@ -9,36 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://chu0mqf18hwgr" path="res://assets/photo2.png" id="7_1l5qh"]
 [ext_resource type="Texture2D" uid="uid://103hb7qkdrxu" path="res://assets/photo3.png" id="8_8mpbl"]
 [ext_resource type="Texture2D" uid="uid://0tek586v75jt" path="res://assets/photo4.png" id="9_fftvx"]
-[ext_resource type="Texture2D" uid="uid://b73mb10hdo7dq" path="res://assets/crossAnimation.png" id="10_1l5qh"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hpkp6"]
-atlas = ExtResource("10_1l5qh")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s2xd6"]
-atlas = ExtResource("10_1l5qh")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1iwxp"]
-atlas = ExtResource("10_1l5qh")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_8mpbl"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hpkp6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s2xd6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1iwxp")
-}],
-"loop": true,
-"name": &"default",
-"speed": 8.0
-}]
 
 [node name="photo_mini_game" type="Node2D" node_paths=PackedStringArray("finish")]
 script = ExtResource("1_lityx")
@@ -50,15 +20,23 @@ script = ExtResource("1_4s37h")
 [node name="Objectives" type="Node2D" parent="." node_paths=PackedStringArray("objectives")]
 z_index = 2
 script = ExtResource("3_623ut")
-objectives = [NodePath("nonexistingPerson"), NodePath("nonexistingPerson2")]
+objectives = [NodePath("nonexistingPerson"), NodePath("nonexistingPerson2"), NodePath("nonexistingPerson3"), NodePath("nonexistingPerson4")]
 
 [node name="nonexistingPerson" parent="Objectives" instance=ExtResource("4_ill1j")]
-position = Vector2(216.00002, 105.00001)
-rotation = -0.8968941
+position = Vector2(199.00002, 153)
+rotation = 0.031003296
 
 [node name="nonexistingPerson2" parent="Objectives" instance=ExtResource("4_ill1j")]
-position = Vector2(-186, -224)
-rotation = 0.6251953
+position = Vector2(281.00003, -217.00002)
+rotation = -0.079830885
+
+[node name="nonexistingPerson3" parent="Objectives" instance=ExtResource("4_ill1j")]
+position = Vector2(-224, -241.99998)
+rotation = -0.100823045
+
+[node name="nonexistingPerson4" parent="Objectives" instance=ExtResource("4_ill1j")]
+position = Vector2(-323, 37)
+rotation = 0.06537062
 
 [node name="WardrobeDoor" type="Sprite2D" parent="."]
 z_index = -1
@@ -89,45 +67,3 @@ position = Vector2(-366, 71.999985)
 rotation = 0.23871061
 scale = Vector2(1.7, 1.808)
 texture = ExtResource("9_fftvx")
-
-[node name="crosses" type="Node2D" parent="."]
-position = Vector2(-315.125, -256.08334)
-scale = Vector2(1.320313, 1.692709)
-
-[node name="cross" type="AnimatedSprite2D" parent="crosses"]
-position = Vector2(69.01772, 8.910771)
-sprite_frames = SubResource("SpriteFrames_8mpbl")
-autoplay = "default"
-
-[node name="cross2" type="AnimatedSprite2D" parent="crosses"]
-position = Vector2(449.988, 23.679993)
-sprite_frames = SubResource("SpriteFrames_8mpbl")
-autoplay = "default"
-
-[node name="cross3" type="AnimatedSprite2D" parent="crosses"]
-position = Vector2(-4.4496765, 173.73532)
-sprite_frames = SubResource("SpriteFrames_8mpbl")
-autoplay = "default"
-
-[node name="cross4" type="AnimatedSprite2D" parent="crosses"]
-position = Vector2(390.91113, 242.26453)
-sprite_frames = SubResource("SpriteFrames_8mpbl")
-autoplay = "default"
-
-[node name="cross5" type="AnimatedSprite2D" parent="crosses"]
-position = Vector2(430.2957, 226.31377)
-rotation = -0.82324326
-sprite_frames = SubResource("SpriteFrames_8mpbl")
-autoplay = "default"
-
-[node name="cross6" type="AnimatedSprite2D" parent="crosses"]
-position = Vector2(418.17737, 4.775404)
-rotation = 0.6164479
-sprite_frames = SubResource("SpriteFrames_8mpbl")
-autoplay = "default"
-
-[node name="cross7" type="AnimatedSprite2D" parent="crosses"]
-position = Vector2(-62.011818, 163.10149)
-rotation = 0.35659373
-sprite_frames = SubResource("SpriteFrames_8mpbl")
-autoplay = "default"
