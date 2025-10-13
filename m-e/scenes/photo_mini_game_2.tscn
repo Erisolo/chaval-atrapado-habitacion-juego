@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ttif40ua6tcc"]
+[gd_scene load_steps=21 format=3 uid="uid://ttif40ua6tcc"]
 
 [ext_resource type="Script" path="res://scripts/ResetScene.gd" id="1_8od38"]
 [ext_resource type="Script" uid="uid://bthilxcjbhgu8" path="res://scripts/CameraMovement.gd" id="2_yykfy"]
@@ -9,6 +9,73 @@
 [ext_resource type="Texture2D" uid="uid://chu0mqf18hwgr" path="res://assets/photo2.png" id="7_a1t57"]
 [ext_resource type="Texture2D" uid="uid://103hb7qkdrxu" path="res://assets/photo3.png" id="8_b2wya"]
 [ext_resource type="Texture2D" uid="uid://0tek586v75jt" path="res://assets/photo4.png" id="9_187r4"]
+[ext_resource type="Texture2D" uid="uid://b73mb10hdo7dq" path="res://assets/crossAnimation.png" id="10_en5yu"]
+[ext_resource type="Texture2D" uid="uid://rsb0ty0eufxb" path="res://assets/Stars.png" id="11_en5yu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpkp6"]
+atlas = ExtResource("10_en5yu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2xd6"]
+atlas = ExtResource("10_en5yu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1iwxp"]
+atlas = ExtResource("10_en5yu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yykfy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpkp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2xd6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1iwxp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mpbl"]
+atlas = ExtResource("11_en5yu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fftvx"]
+atlas = ExtResource("11_en5yu")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ubbu"]
+atlas = ExtResource("11_en5yu")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jx3ps"]
+atlas = ExtResource("11_en5yu")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vs1k4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mpbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fftvx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ubbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jx3ps")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="photo_mini_game" type="Node2D" node_paths=PackedStringArray("finish")]
 script = ExtResource("1_8od38")
@@ -20,19 +87,19 @@ script = ExtResource("2_yykfy")
 [node name="Objectives" type="Node2D" parent="." node_paths=PackedStringArray("objectives")]
 z_index = 2
 script = ExtResource("3_en5yu")
-objectives = [NodePath("nonexistingPerson"), NodePath("nonexistingPerson2"), NodePath("nonexistingPerson3"), NodePath("nonexistingPerson4")]
+objectives = [NodePath("nonexistingPerson"), NodePath("nonexistingPerson2"), NodePath("nonexistingPerson3")]
 
 [node name="nonexistingPerson" parent="Objectives" instance=ExtResource("4_vs1k4")]
-position = Vector2(201, 152)
+position = Vector2(249.00002, 127)
+rotation = -0.76436394
 
 [node name="nonexistingPerson2" parent="Objectives" instance=ExtResource("4_vs1k4")]
-position = Vector2(280, -217)
+position = Vector2(241, -255)
+rotation = -2.271602
 
 [node name="nonexistingPerson3" parent="Objectives" instance=ExtResource("4_vs1k4")]
-position = Vector2(-225, -242)
-
-[node name="nonexistingPerson4" parent="Objectives" instance=ExtResource("4_vs1k4")]
-position = Vector2(-322, 36)
+position = Vector2(-397, 14.000015)
+rotation = 2.275637
 
 [node name="WardrobeDoor" type="Sprite2D" parent="."]
 z_index = -1
@@ -63,3 +130,66 @@ position = Vector2(-366, 71.999985)
 rotation = 0.23871061
 scale = Vector2(1.7, 1.808)
 texture = ExtResource("9_187r4")
+
+[node name="crosses" type="Node2D" parent="."]
+position = Vector2(-315.125, -256.08334)
+scale = Vector2(1.320313, 1.692709)
+
+[node name="cross" type="AnimatedSprite2D" parent="crosses"]
+position = Vector2(69.01772, 8.910771)
+sprite_frames = SubResource("SpriteFrames_yykfy")
+autoplay = "default"
+
+[node name="cross2" type="AnimatedSprite2D" parent="crosses"]
+position = Vector2(449.988, 23.679993)
+sprite_frames = SubResource("SpriteFrames_yykfy")
+autoplay = "default"
+
+[node name="cross3" type="AnimatedSprite2D" parent="crosses"]
+position = Vector2(-4.4496765, 173.73532)
+sprite_frames = SubResource("SpriteFrames_yykfy")
+autoplay = "default"
+
+[node name="cross4" type="AnimatedSprite2D" parent="crosses"]
+position = Vector2(390.91113, 242.26453)
+sprite_frames = SubResource("SpriteFrames_yykfy")
+autoplay = "default"
+
+[node name="Stars" type="Node2D" parent="."]
+position = Vector2(-323, 37)
+rotation = 0.06537061
+scale = Vector2(0.30000004, 0.30000004)
+
+[node name="star" type="AnimatedSprite2D" parent="Stars"]
+z_index = 3
+position = Vector2(273.83142, 559.97485)
+scale = Vector2(20.12093, 18.61338)
+sprite_frames = SubResource("SpriteFrames_vs1k4")
+frame = 1
+
+[node name="star2" type="AnimatedSprite2D" parent="Stars"]
+z_index = 3
+position = Vector2(1541.9966, -70.88086)
+scale = Vector2(20.12093, 18.61338)
+sprite_frames = SubResource("SpriteFrames_vs1k4")
+
+[node name="star3" type="AnimatedSprite2D" parent="Stars"]
+z_index = 3
+position = Vector2(345.78217, -1198.481)
+scale = Vector2(20.12093, 18.61338)
+sprite_frames = SubResource("SpriteFrames_vs1k4")
+frame = 2
+
+[node name="star4" type="AnimatedSprite2D" parent="Stars"]
+z_index = 3
+position = Vector2(2166.0627, -539.3145)
+scale = Vector2(20.12093, 18.61338)
+sprite_frames = SubResource("SpriteFrames_vs1k4")
+frame = 3
+
+[node name="star5" type="AnimatedSprite2D" parent="Stars"]
+z_index = 3
+position = Vector2(1332.6384, -1329.8938)
+scale = Vector2(20.12093, 18.61338)
+sprite_frames = SubResource("SpriteFrames_vs1k4")
+frame = 1

@@ -3,25 +3,33 @@ A normal wardrobe, with some photos of you and your friends on the door.
 Your dear, dear friends.
 Isn't friendship beauiful?
 - See the pictures.
-	You don't recognize the people in these photos
+	You don't recognize the people in these photos.
 	Who is that girl whose hair covers her face?
+	Better cross her face off. Get her face off your wardrobe.
+	No need to keep the face of a stranger in there.
 	do Checklist.addChore("Photos", ["Check the photos", "Check the photos", "Check the photos", ""])
 - Leave.
 => END
 ~ Solved
-There still are people you don't recognize in the photos
+That's better.
+But there still are people you don't recognize in the photos.
 => END
 ~ CheckAgain
-You see a man with glasses you don't quite recognize
-do SceneManager.changeScene("res://scenes/photo_mini_game.tscn") # esto seria la segunda vez
+That guy, with the glasses... You have no idea who he is.
+Another [shake] stranger [/shake].
+Get. him. out.
+do SceneManager.changeScene("res://scenes/photo_mini_game_2.tscn") # esto seria la segunda vez
 => END
 ~ CheckAgainAgain
 The smile of this person is... strange...
-do SceneManager.changeScene("res://scenes/photo_mini_game.tscn") # esto sería la tercera vez
+Have you ever seen them? I don't think so.
+Ugh, such a creepy smile...
+Cross. Them. Out. [shake] NOW. [/shake]
+do SceneManager.changeScene("res://scenes/photo_mini_game_3.tscn") # esto sería la tercera vez
 => END
 ~ AllSolved
-That's better
-Never talk about this again
+It's all good now. No strangers.
+Never talk about this again.
 => END
 ~ Wardrobe
 Nothing to look here

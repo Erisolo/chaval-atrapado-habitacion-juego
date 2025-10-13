@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://qe35yb6vv560"]
+[gd_scene load_steps=21 format=3 uid="uid://qe35yb6vv560"]
 
 [ext_resource type="Script" path="res://scripts/ResetScene.gd" id="1_bhl4a"]
 [ext_resource type="Script" uid="uid://bthilxcjbhgu8" path="res://scripts/CameraMovement.gd" id="2_tl7l3"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://103hb7qkdrxu" path="res://assets/photo3.png" id="8_arx0u"]
 [ext_resource type="Texture2D" uid="uid://0tek586v75jt" path="res://assets/photo4.png" id="9_nr8aa"]
 [ext_resource type="Texture2D" uid="uid://b73mb10hdo7dq" path="res://assets/crossAnimation.png" id="10_tl7l3"]
+[ext_resource type="Texture2D" uid="uid://rsb0ty0eufxb" path="res://assets/Stars.png" id="11_ebfnh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hpkp6"]
 atlas = ExtResource("10_tl7l3")
@@ -38,6 +39,42 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mpbl"]
+atlas = ExtResource("11_ebfnh")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fftvx"]
+atlas = ExtResource("11_ebfnh")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ubbu"]
+atlas = ExtResource("11_ebfnh")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jx3ps"]
+atlas = ExtResource("11_ebfnh")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rwheh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mpbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fftvx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ubbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jx3ps")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
 }]
 
 [node name="photo_mini_game" type="Node2D" node_paths=PackedStringArray("finish")]
@@ -131,3 +168,42 @@ position = Vector2(-62.011818, 163.10149)
 rotation = 0.35659373
 sprite_frames = SubResource("SpriteFrames_ebfnh")
 autoplay = "default"
+
+[node name="Stars" type="Node2D" parent="."]
+position = Vector2(-323, 37)
+rotation = 0.06537061
+scale = Vector2(0.30000004, 0.30000004)
+
+[node name="star" type="AnimatedSprite2D" parent="Stars"]
+z_index = 3
+position = Vector2(273.83142, 559.97485)
+scale = Vector2(20.12093, 18.61338)
+sprite_frames = SubResource("SpriteFrames_rwheh")
+frame = 1
+
+[node name="star2" type="AnimatedSprite2D" parent="Stars"]
+z_index = 3
+position = Vector2(1541.9966, -70.88086)
+scale = Vector2(20.12093, 18.61338)
+sprite_frames = SubResource("SpriteFrames_rwheh")
+
+[node name="star3" type="AnimatedSprite2D" parent="Stars"]
+z_index = 3
+position = Vector2(345.78217, -1198.481)
+scale = Vector2(20.12093, 18.61338)
+sprite_frames = SubResource("SpriteFrames_rwheh")
+frame = 2
+
+[node name="star4" type="AnimatedSprite2D" parent="Stars"]
+z_index = 3
+position = Vector2(2166.0627, -539.3145)
+scale = Vector2(20.12093, 18.61338)
+sprite_frames = SubResource("SpriteFrames_rwheh")
+frame = 3
+
+[node name="star5" type="AnimatedSprite2D" parent="Stars"]
+z_index = 3
+position = Vector2(1332.6384, -1329.8938)
+scale = Vector2(20.12093, 18.61338)
+sprite_frames = SubResource("SpriteFrames_rwheh")
+frame = 1

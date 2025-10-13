@@ -137,7 +137,7 @@ func _manage_step(chore: Chore):
 		elif chore.currentStep == 3:
 			changeStapplerDialogue("Photos3")
 			wardrobe.dialogueStartPoint = "Wardrobe"
-			if !chore.doneOnce[1]:
+			if !chore.doneOnce[3]:
 				DialogueManager.show_dialogue_balloon(photosDialogue, "AllSolved")
 				chore.doneOnce[3] = true
 				chore.finishCurrentStep()
