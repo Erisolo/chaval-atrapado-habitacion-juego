@@ -32,11 +32,16 @@ Um. Yeah you shouldn't let that thing be inside you.
 I think you should take it out.
 => END
 ~ Scissors
-You push the scissors right into your belly.
-You find some slimy rope.
-Just shove it back inside.
-Turns out there was no one inside you all along. That's a relief.
-do Checklist.getChore("InsideYou").finishCurrentStep()
+Yeah, they're sharp enough.
+- Use the scissors.
+	You push the scissors right into your belly.
+	You find some slimy rope.
+	Just shove it back inside.
+	Turns out there was no one inside you all along. That's a relief.
+	do Checklist.getChore("InsideYou").finishCurrentStep()
+- Leave them.
+	Whatever you say, man. 
+	You're the one with someone inside anyways.
 => END
 ~ ScissorsAfter
 Just a pair of scissors. That you used to cut yourself open.

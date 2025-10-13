@@ -321,4 +321,4 @@ rotation = -0.465745
 scale = Vector2(2.8046875, 3.0156252)
 sprite_frames = SubResource("SpriteFrames_nmwkt")
 autoplay = "default"
-frame_progress = 0.7493852
+frame_progress = 0.7246489
