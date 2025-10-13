@@ -1,0 +1,324 @@
+[gd_scene load_steps=32 format=3 uid="uid://byg0wm1871yr"]
+
+[ext_resource type="Texture2D" uid="uid://c4eg3iblpxg75" path="res://assets/roomObjects/bed.png" id="1_rd5xi"]
+[ext_resource type="FontFile" uid="uid://bl644kfdk3f34" path="res://fonts/pixel.ttf" id="2_kskns"]
+[ext_resource type="Texture2D" uid="uid://b4pfpt47cs7cu" path="res://assets/roomObjects/grapadora.png" id="3_5nqs2"]
+[ext_resource type="Texture2D" uid="uid://xy51qttfvnkv" path="res://assets/keycapsAnimation.png" id="4_474mp"]
+[ext_resource type="Texture2D" uid="uid://t6opygmiu726" path="res://assets/mouseAnimation.png" id="5_dhp3w"]
+
+[sub_resource type="Theme" id="Theme_8h01u"]
+default_font = ExtResource("2_kskns")
+
+[sub_resource type="Theme" id="Theme_rd5xi"]
+default_font = ExtResource("2_kskns")
+
+[sub_resource type="Theme" id="Theme_udpou"]
+default_font = ExtResource("2_kskns")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8whm"]
+atlas = ExtResource("4_474mp")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbbrn"]
+atlas = ExtResource("4_474mp")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pv4d"]
+atlas = ExtResource("4_474mp")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggaiq"]
+atlas = ExtResource("4_474mp")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bcube"]
+atlas = ExtResource("4_474mp")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ie5vg"]
+atlas = ExtResource("4_474mp")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tqo3"]
+atlas = ExtResource("4_474mp")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myfrs"]
+atlas = ExtResource("4_474mp")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rj5fk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8whm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbbrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pv4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggaiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bcube")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ie5vg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tqo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myfrs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4iji"]
+atlas = ExtResource("5_dhp3w")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sdtn"]
+atlas = ExtResource("5_dhp3w")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvhug"]
+atlas = ExtResource("5_dhp3w")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_424d4"]
+atlas = ExtResource("5_dhp3w")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ebum"]
+atlas = ExtResource("5_dhp3w")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emro1"]
+atlas = ExtResource("5_dhp3w")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uq4fv"]
+atlas = ExtResource("5_dhp3w")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5aar"]
+atlas = ExtResource("5_dhp3w")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrs3j"]
+atlas = ExtResource("5_dhp3w")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bairg"]
+atlas = ExtResource("5_dhp3w")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24muk"]
+atlas = ExtResource("5_dhp3w")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i065d"]
+atlas = ExtResource("5_dhp3w")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdqqs"]
+atlas = ExtResource("5_dhp3w")
+region = Rect2(768, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nmwkt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4iji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sdtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvhug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_424d4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ebum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emro1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uq4fv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5aar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrs3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bairg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24muk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i065d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdqqs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="InitialMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1144.0
+offset_bottom = 648.0
+color = Color(0.047058824, 0.047058824, 0.047058824, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+
+[node name="Bed" type="Sprite2D" parent="."]
+position = Vector2(245, 295)
+scale = Vector2(4.8515625, 4.9765625)
+texture = ExtResource("1_rd5xi")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 13.0
+offset_right = 1081.0
+offset_bottom = 388.0
+theme = SubResource("Theme_8h01u")
+bbcode_enabled = true
+text = "[font_size=200][shake]M  E[/shake][/font_size]"
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(0.51718444, 0.5171845, 0.51718444, 1)
+layout_mode = 0
+offset_left = 587.0
+offset_top = 397.0
+offset_right = 921.0
+offset_bottom = 553.0
+theme = SubResource("Theme_rd5xi")
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 80
+text = "play"
+
+[node name="tips" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="tips"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.562
+anchor_top = 7.7750006
+anchor_right = 14.562
+anchor_bottom = 7.7750006
+offset_left = -565.48
+offset_top = -293.00003
+offset_right = 544.52
+offset_bottom = 313.99997
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.28118682, 0.28118688, 0.28118682, 1)
+
+[node name="Label" type="Label" parent="tips"]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 13.0
+offset_right = 714.0
+offset_bottom = 113.0
+theme = SubResource("Theme_udpou")
+theme_override_font_sizes/font_size = 50
+text = "Tips"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="tips"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 178.0
+offset_right = 372.0
+offset_bottom = 278.0
+theme = SubResource("Theme_udpou")
+theme_override_font_sizes/font_size = 25
+text = "Move with wasd/arrows"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="tips"]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 178.0
+offset_right = 748.0
+offset_bottom = 278.0
+theme = SubResource("Theme_udpou")
+theme_override_font_sizes/font_size = 25
+text = "Interact with mouse/z"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="tips"]
+layout_mode = 0
+offset_left = 771.0
+offset_top = 178.0
+offset_right = 1099.0
+offset_bottom = 319.0
+theme = SubResource("Theme_udpou")
+theme_override_font_sizes/font_size = 25
+text = "Talk to the stappler"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Button2" type="Button" parent="tips"]
+modulate = Color(0.51718444, 0.5171845, 0.51718444, 1)
+layout_mode = 0
+offset_left = 418.0
+offset_top = 483.0
+offset_right = 704.0
+offset_bottom = 611.0
+theme = SubResource("Theme_rd5xi")
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 66
+text = "play"
+
+[node name="Grapadora" type="Sprite2D" parent="tips"]
+position = Vector2(936.99994, 382.99997)
+scale = Vector2(11.031251, 9.53125)
+texture = ExtResource("3_5nqs2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tips"]
+position = Vector2(189, 389)
+scale = Vector2(3.7968757, 3.4687502)
+sprite_frames = SubResource("SpriteFrames_rj5fk")
+autoplay = "default"
+frame_progress = 0.55833656
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="tips"]
+position = Vector2(575, 386.99997)
+rotation = -0.465745
+scale = Vector2(2.8046875, 3.0156252)
+sprite_frames = SubResource("SpriteFrames_nmwkt")
+autoplay = "default"
+frame_progress = 0.7493852
