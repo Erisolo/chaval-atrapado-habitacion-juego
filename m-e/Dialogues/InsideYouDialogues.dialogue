@@ -38,3 +38,6 @@ Just shove it back inside.
 Turns out there was no one inside you all along. That's a relief.
 do Checklist.getChore("InsideYou").finishCurrentStep()
 => END
+~ ScissorsAfter
+Just a pair of scissors. That you used to cut yourself open.
+Quite sharp, a bit bloody.
