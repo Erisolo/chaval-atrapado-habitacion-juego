@@ -1,0 +1,122 @@
+[gd_scene load_steps=11 format=3 uid="uid://dwpqip1hcoi08"]
+
+[ext_resource type="FontFile" uid="uid://bl644kfdk3f34" path="res://fonts/pixel.ttf" id="1_0bpdh"]
+[ext_resource type="Script" uid="uid://cpre1rfw6g427" path="res://scripts/rollingCredits.gd" id="1_ih6pn"]
+[ext_resource type="Texture2D" uid="uid://b4pfpt47cs7cu" path="res://assets/roomObjects/grapadora.png" id="2_ooihk"]
+[ext_resource type="Texture2D" uid="uid://c4eg3iblpxg75" path="res://assets/roomObjects/bed.png" id="3_ih6pn"]
+[ext_resource type="Texture2D" uid="uid://ct3f0dg7iqr3q" path="res://assets/roomObjects/pills.png" id="4_7lgdl"]
+[ext_resource type="Texture2D" uid="uid://bsw6yyjq3ompy" path="res://assets/roomObjects/scissors.png" id="5_c6kru"]
+[ext_resource type="Texture2D" uid="uid://cnalhw1pfllc1" path="res://assets/roomObjects/door.png" id="6_qbfqv"]
+[ext_resource type="Texture2D" uid="uid://chu0mqf18hwgr" path="res://assets/photo2.png" id="7_x5q3x"]
+[ext_resource type="Texture2D" uid="uid://103hb7qkdrxu" path="res://assets/photo3.png" id="8_nmdnh"]
+
+[sub_resource type="Theme" id="Theme_0bpdh"]
+default_font = ExtResource("1_0bpdh")
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 645.0
+color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_top = 637.0
+offset_right = 40.0
+offset_bottom = 677.0
+script = ExtResource("1_ih6pn")
+speed = 50.0
+finishPos = -1089.0
+
+[node name="Grapadora" type="Sprite2D" parent="Control"]
+position = Vector2(847.5, 281.5)
+rotation = 0.6767643
+scale = Vector2(11.968751, 12.093751)
+texture = ExtResource("2_ooihk")
+
+[node name="Bed" type="Sprite2D" parent="Control"]
+position = Vector2(171, 505)
+rotation = -0.7213287
+texture = ExtResource("3_ih6pn")
+
+[node name="Pills" type="Sprite2D" parent="Control"]
+position = Vector2(1010.9999, 786.9999)
+scale = Vector2(5.685184, 5.7916646)
+texture = ExtResource("4_7lgdl")
+
+[node name="Scissors" type="Sprite2D" parent="Control"]
+position = Vector2(226.99998, 172)
+rotation = -0.6700719
+scale = Vector2(4.1562495, 4.562499)
+texture = ExtResource("5_c6kru")
+
+[node name="Door" type="Sprite2D" parent="Control"]
+position = Vector2(575, 1478)
+scale = Vector2(5.5703125, 6.8593764)
+texture = ExtResource("6_qbfqv")
+
+[node name="Photo2" type="Sprite2D" parent="Control"]
+position = Vector2(171.6631, 898.9847)
+rotation = -0.6585703
+scale = Vector2(1.5570743, 1.817232)
+texture = ExtResource("7_x5q3x")
+
+[node name="Photo3" type="Sprite2D" parent="Control"]
+position = Vector2(1004.0001, 471)
+rotation = 0.6163683
+texture = ExtResource("8_nmdnh")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 1206.0
+theme = SubResource("Theme_0bpdh")
+bbcode_enabled = true
+text = "main Programmer
+[color=darkgray]Mika rodríguez[/color]
+
+a tiny bit of programing
+[color=darkgray]maría (eri) solórzano [/color]
+
+pixel art
+[color=darkgray]Eri solórzano[/color]
+(except the hamster food)
+[color=darkgray](mika Rodríguez)[/color]
+
+design
+[color=darkgray]Eri solórzano and mika rodríguez[/color]
+
+script
+[color=darkgray](mostly) eri solórzano[/color]
+
+additional assets and tools
+[color=darkgray]made with godot engine
+used godot dialogue manager, by nathan hoad
+the background from the game balatro
+some polaroid pictures eri found on pinterest and altered to oblivion
+a picture of the RAKKESTAD wardrobe by ikea (also altered to oblivion)
+añadir aqui audio[/color]
+
+special thanks [color=darkgray]
+Mario vaquerizo 
+jovanni vázquez
+eri's mother (for the food)
+el reno renardo for the song  \"tu hamster\" [/color]
+
+
+
+
+
+
+
+
+[pulse][font_size=24] thank you for playing [/font_size][/pulse]"
+horizontal_alignment = 1
