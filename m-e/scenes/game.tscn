@@ -30,12 +30,9 @@
 [ext_resource type="Texture2D" uid="uid://xh14tbuk5423" path="res://assets/roomObjects/wardrobeTop.png" id="14_e1j6l"]
 [ext_resource type="Script" uid="uid://br1ui7iqugiyd" path="res://scripts/SlowlyRotate.gd" id="16_ca42v"]
 [ext_resource type="PackedScene" uid="uid://laniajpobv6" path="res://prefabs/door.tscn" id="27_qnb83"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://ch8p6p3kq2miy" path="res://prefabs/Teeth.tscn" id="31_qouja"]
-=======
 [ext_resource type="PackedScene" path="res://prefabs/Teeth.tscn" id="31_qouja"]
 [ext_resource type="Texture2D" uid="uid://crr3qryow25qi" path="res://assets/balatro.png" id="31_wljb1"]
->>>>>>> refs/remotes/origin/main
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
 size = Vector2(775, 8.69403)
@@ -381,14 +378,8 @@ position = Vector2(227, 92)
 modulate = Color(0.224023, 0.142732, 0.442032, 0.701961)
 z_index = -1
 z_as_relative = false
-<<<<<<< HEAD
-position = Vector2(215, 24)
-scale = Vector2(15.0417, 19.9185)
-texture = ExtResource("21_37s47")
-=======
 position = Vector2(261, 66)
 scale = Vector2(9.316667, 11.4787035)
 texture = ExtResource("31_wljb1")
->>>>>>> refs/remotes/origin/main
 script = ExtResource("16_ca42v")
 rotationAmount = 0.05
