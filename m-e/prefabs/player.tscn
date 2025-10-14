@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cyyjelwi3nonx"]
+[gd_scene load_steps=37 format=3 uid="uid://cyyjelwi3nonx"]
 
 [ext_resource type="Script" uid="uid://cj54y4qyjl22c" path="res://scripts/PlayerMovement.gd" id="1_4dohe"]
 [ext_resource type="Texture2D" uid="uid://bw0xahxs8thd1" path="res://assets/falling.png" id="2_kbsxf"]
@@ -8,10 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://2bsnlna0b15i" path="res://assets/backwalk-sheet.png" id="4_ht1c8"]
 [ext_resource type="Texture2D" uid="uid://dl2ex7hbor67s" path="res://assets/stabb.png" id="4_rgeog"]
 [ext_resource type="Texture2D" uid="uid://xl0ocwom71h" path="res://assets/tummyAche.png" id="5_opo22"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f2e50"]
-atlas = ExtResource("2_kbsxf")
-region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_22xyk"]
 atlas = ExtResource("2_kbsxf")
@@ -119,11 +115,8 @@ region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_llb5v"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f2e50")
-}],
-"loop": true,
+"frames": [],
+"loop": false,
 "name": &"fallen",
 "speed": 5.0
 }, {
@@ -140,7 +133,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gf0v6")
 }],
-"loop": true,
+"loop": false,
 "name": &"falling",
 "speed": 5.0
 }, {
@@ -177,7 +170,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8jxos")
 }],
-"loop": true,
+"loop": false,
 "name": &"stab",
 "speed": 5.0
 }, {
@@ -252,9 +245,8 @@ script = ExtResource("1_4dohe")
 position = Vector2(-3, -15)
 scale = Vector2(0.40625, 0.4375)
 sprite_frames = SubResource("SpriteFrames_llb5v")
-animation = &"fallen"
+animation = &"stab"
 autoplay = "idle"
-frame_progress = 0.2937568
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, -4)
