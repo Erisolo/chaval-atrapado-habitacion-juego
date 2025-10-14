@@ -1,10 +1,33 @@
-[gd_scene load_steps=22 format=3 uid="uid://cyyjelwi3nonx"]
+[gd_scene load_steps=38 format=3 uid="uid://cyyjelwi3nonx"]
 
 [ext_resource type="Script" uid="uid://cj54y4qyjl22c" path="res://scripts/PlayerMovement.gd" id="1_4dohe"]
+[ext_resource type="Texture2D" uid="uid://bw0xahxs8thd1" path="res://assets/falling.png" id="2_kbsxf"]
 [ext_resource type="Texture2D" uid="uid://crx8e0yc4kjp2" path="res://assets/idle.png" id="2_r66lb"]
 [ext_resource type="Texture2D" uid="uid://b62brflosjeuu" path="res://assets/walk-side.png" id="3_1txc5"]
 [ext_resource type="Texture2D" uid="uid://dtd00lqelu2b2" path="res://assets/frontWalk.png" id="4_1txc5"]
 [ext_resource type="Texture2D" uid="uid://2bsnlna0b15i" path="res://assets/backwalk-sheet.png" id="4_ht1c8"]
+[ext_resource type="Texture2D" uid="uid://dl2ex7hbor67s" path="res://assets/stabb.png" id="4_rgeog"]
+[ext_resource type="Texture2D" uid="uid://xl0ocwom71h" path="res://assets/tummyAche.png" id="5_opo22"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2e50"]
+atlas = ExtResource("2_kbsxf")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22xyk"]
+atlas = ExtResource("2_kbsxf")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3tw4"]
+atlas = ExtResource("2_kbsxf")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmymu"]
+atlas = ExtResource("2_kbsxf")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gf0v6"]
+atlas = ExtResource("2_kbsxf")
+region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ht1c8"]
 atlas = ExtResource("2_r66lb")
@@ -13,6 +36,38 @@ region = Rect2(0, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2jcq"]
 atlas = ExtResource("2_r66lb")
 region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv2ms"]
+atlas = ExtResource("4_rgeog")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g56qp"]
+atlas = ExtResource("4_rgeog")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axxvs"]
+atlas = ExtResource("4_rgeog")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ay5dx"]
+atlas = ExtResource("4_rgeog")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5loxu"]
+atlas = ExtResource("4_rgeog")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sh7kr"]
+atlas = ExtResource("4_rgeog")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jxos"]
+atlas = ExtResource("4_rgeog")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2c4y0"]
+atlas = ExtResource("5_opo22")
+region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u51tk"]
 atlas = ExtResource("3_1txc5")
@@ -66,6 +121,31 @@ region = Rect2(192, 0, 64, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_f2e50")
+}],
+"loop": true,
+"name": &"fallen",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22xyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3tw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmymu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gf0v6")
+}],
+"loop": true,
+"name": &"falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ht1c8")
 }, {
 "duration": 1.0,
@@ -73,6 +153,40 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cv2ms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g56qp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axxvs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ay5dx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5loxu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sh7kr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jxos")
+}],
+"loop": true,
+"name": &"stab",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2c4y0")
+}],
+"loop": true,
+"name": &"tummy-ache",
 "speed": 5.0
 }, {
 "frames": [{
@@ -138,8 +252,9 @@ script = ExtResource("1_4dohe")
 position = Vector2(-3, -15)
 scale = Vector2(0.40625, 0.4375)
 sprite_frames = SubResource("SpriteFrames_llb5v")
-animation = &"walk-back"
+animation = &"fallen"
 autoplay = "idle"
+frame_progress = 0.2937568
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, -4)
