@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cnk61fbhc4qt4"]
+[gd_scene load_steps=14 format=3 uid="uid://cnk61fbhc4qt4"]
 
-[ext_resource type="Script" path="res://scripts/ShowForSeconds.gd" id="2_i7v4k"]
+[ext_resource type="Script" uid="uid://cksrl7mqkxiuh" path="res://scripts/ShowForSeconds.gd" id="2_i7v4k"]
 [ext_resource type="Texture2D" uid="uid://cex3wgasoc6ea" path="res://assets/pixel_art_small(8).png" id="2_ir60y"]
 [ext_resource type="Texture2D" uid="uid://cjf8bhoqrqgmk" path="res://assets/animationMirror.png" id="3_ir60y"]
+[ext_resource type="Texture2D" uid="uid://bm4db8wp8yi1o" path="res://assets/animationMirror2.png" id="4_1vfa4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1vfa4"]
 atlas = ExtResource("3_ir60y")
@@ -18,6 +19,22 @@ region = Rect2(256, 0, 128, 172)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_do7c7"]
 atlas = ExtResource("3_ir60y")
+region = Rect2(384, 0, 128, 172)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyos6"]
+atlas = ExtResource("4_1vfa4")
+region = Rect2(0, 0, 128, 172)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyu6j"]
+atlas = ExtResource("4_1vfa4")
+region = Rect2(128, 0, 128, 172)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e6nd"]
+atlas = ExtResource("4_1vfa4")
+region = Rect2(256, 0, 128, 172)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8n2yd"]
+atlas = ExtResource("4_1vfa4")
 region = Rect2(384, 0, 128, 172)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1vfa4"]
@@ -38,18 +55,35 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyos6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyu6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e6nd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8n2yd")
+}],
+"loop": true,
+"name": &"eye",
+"speed": 5.0
 }]
 
-[node name="Sprite2D" type="Sprite2D"]
+[node name="Sprite2D" type="Sprite2D" node_paths=PackedStringArray("animator")]
 script = ExtResource("2_i7v4k")
-seconds = 5
 Scene = "res://scenes/game.tscn"
 chore = "InsideYou"
+animator = NodePath("PixelArtSmall(8)/AnimatedSprite2D")
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="PixelArtSmall(8)" type="Sprite2D" parent="."]
-position = Vector2(581.5, 450.99997)
+position = Vector2(572, 451)
 scale = Vector2(8.703705, 7.3511944)
 texture = ExtResource("2_ir60y")
 
@@ -58,4 +92,4 @@ position = Vector2(0.42111206, -11.477948)
 scale = Vector2(0.515172, 0.6081545)
 sprite_frames = SubResource("SpriteFrames_1vfa4")
 autoplay = "default"
-frame_progress = 0.4025366
+frame_progress = 0.6163074
