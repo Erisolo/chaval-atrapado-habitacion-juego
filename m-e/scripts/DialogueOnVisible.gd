@@ -3,7 +3,7 @@ extends Node2D
 @export var waitTime = 0
 @export var dialogue: DialogueResource
 @export var startPoint = "start"
-@export var visibleNode: CanvasItem
+@export var visibleNode: Node2D
 
 func _ready() -> void:
 	visibleNode.visibility_changed.connect(_start_dialogue)

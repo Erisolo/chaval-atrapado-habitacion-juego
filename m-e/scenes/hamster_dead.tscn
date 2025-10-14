@@ -1,70 +1,149 @@
-[gd_scene load_steps=9 format=3 uid="uid://byvrnnwlc4fw5"]
+[gd_scene load_steps=18 format=3 uid="uid://byvrnnwlc4fw5"]
 
-[ext_resource type="Texture2D" uid="uid://4khbpr7kq5qr" path="res://assets/HamsterDurisimo.jpg" id="1_2jkct"]
 [ext_resource type="Script" uid="uid://ba6xodbonec6" path="res://scripts/DialogueOnVisible.gd" id="1_ar83r"]
 [ext_resource type="Script" uid="uid://c64mf15olqyk" path="res://scripts/ShowInElapsedTime.gd" id="2_ar83r"]
 [ext_resource type="Resource" uid="uid://cj8xn1mntwliy" path="res://Dialogues/HamsterDilogues.dialogue" id="2_xdft4"]
+[ext_resource type="Texture2D" uid="uid://5lei4o2e2dsb" path="res://assets/deadHamster.png" id="3_62atp"]
+[ext_resource type="Texture2D" uid="uid://cps8dicouaq7t" path="res://assets/isYourHamsterDead.png" id="5_62atp"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_xdft4"]
-font_size = 100
+[sub_resource type="AtlasTexture" id="AtlasTexture_4utg0"]
+atlas = ExtResource("5_62atp")
+region = Rect2(510, 0, 255, 165)
 
-[sub_resource type="LabelSettings" id="LabelSettings_62atp"]
-font_size = 100
+[sub_resource type="AtlasTexture" id="AtlasTexture_mntj2"]
+atlas = ExtResource("5_62atp")
+region = Rect2(765, 0, 255, 165)
 
-[sub_resource type="LabelSettings" id="LabelSettings_4utg0"]
-font_size = 100
+[sub_resource type="SpriteFrames" id="SpriteFrames_on6cy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4utg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mntj2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
-[sub_resource type="LabelSettings" id="LabelSettings_mntj2"]
-font_size = 150
+[sub_resource type="AtlasTexture" id="AtlasTexture_3j436"]
+atlas = ExtResource("5_62atp")
+region = Rect2(1020, 0, 255, 165)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpqya"]
+atlas = ExtResource("5_62atp")
+region = Rect2(1275, 0, 255, 165)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_imgr6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3j436")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpqya")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxer5"]
+atlas = ExtResource("5_62atp")
+region = Rect2(1530, 0, 255, 165)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_poonr"]
+atlas = ExtResource("5_62atp")
+region = Rect2(1785, 0, 255, 165)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_76l25"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxer5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_poonr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62atp"]
+atlas = ExtResource("5_62atp")
+region = Rect2(0, 0, 255, 165)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_on6cy"]
+atlas = ExtResource("5_62atp")
+region = Rect2(255, 0, 255, 165)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cwbke"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62atp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_on6cy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="hamster_dead" type="Node2D" node_paths=PackedStringArray("visibleNode")]
 script = ExtResource("1_ar83r")
 waitTime = 1
 dialogue = ExtResource("2_xdft4")
 startPoint = "IsYourHamsterDead"
-visibleNode = NodePath("Node2D/dead")
+visibleNode = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(548, 302)
-texture = ExtResource("1_2jkct")
+visible = false
+position = Vector2(572, 76)
+scale = Vector2(3, 3)
+texture = ExtResource("3_62atp")
 
-[node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("labels")]
+[node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("labels", "hamster")]
 script = ExtResource("2_ar83r")
-labels = [NodePath("Is"), NodePath("your"), NodePath("Hamster"), NodePath("dead")]
+labels = [NodePath("is"), NodePath("your2"), NodePath("hamster"), NodePath("AnimatedSprite2D4")]
 secondsBetweenLabels = 1
+hamster = NodePath("../Sprite2D")
 
-[node name="Is" type="Label" parent="Node2D"]
+[node name="is" type="AnimatedSprite2D" parent="Node2D"]
 visible = false
-offset_left = 60.0
-offset_top = 19.0
-offset_right = 151.0
-offset_bottom = 156.0
-text = "IS"
-label_settings = SubResource("LabelSettings_xdft4")
+position = Vector2(318, 102)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_on6cy")
+frame_progress = 0.027277792
 
-[node name="your" type="Label" parent="Node2D"]
+[node name="your2" type="AnimatedSprite2D" parent="Node2D"]
 visible = false
-offset_left = 236.0
-offset_top = 19.0
-offset_right = 512.0
-offset_bottom = 156.0
-text = "YOUR"
-label_settings = SubResource("LabelSettings_62atp")
+position = Vector2(459, 70)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_imgr6")
+frame_progress = 0.47619295
 
-[node name="Hamster" type="Label" parent="Node2D"]
+[node name="hamster" type="AnimatedSprite2D" parent="Node2D"]
 visible = false
-offset_left = 589.0
-offset_top = 21.0
-offset_right = 1054.0
-offset_bottom = 158.0
-text = "HAMSTER"
-label_settings = SubResource("LabelSettings_4utg0")
+position = Vector2(729.99994, 57.999996)
+rotation = 0.10404642
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_76l25")
+frame_progress = 0.2598272
 
-[node name="dead" type="Label" parent="Node2D"]
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Node2D"]
 visible = false
-offset_left = 312.0
-offset_top = 109.0
-offset_right = 783.0
-offset_bottom = 314.0
-text = "DEAD?"
-label_settings = SubResource("LabelSettings_mntj2")
+position = Vector2(532, 180.00002)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_cwbke")
+frame_progress = 0.53978014
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 1153.0
+offset_bottom = 650.0
+color = Color(0, 0, 0, 1)
