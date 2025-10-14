@@ -1,0 +1,38 @@
+~ start
+Stappler: Wassup, dude? I'm going to sleep soon. You should too.
+- Leave
+	Stappler: g'night, dude
+	=> END
+- Try to say something
+	Stappler: No need, dude. Just go to bed.
+	You've heard it. Go to sleep. You haven't exacly earned it, but you should nonetheless.
+	- Leave. Go to bed.
+		Stappler: g'night, dude
+		=> END
+	- Try to say something
+		Stappler: dude-
+		Really? You try to speak now? Just go to bed already.
+		- GO. TO. BED.
+			Stappler: g'night, dude
+			=> END
+		-  try to say something
+			You: Why... Why do I keep doing this...?
+			Stappler: What-
+			Oh, great. Now they're speaking-
+			You: Why... Do you keep making me do this?
+			You: Why do I keep making all of these decisions? Why do you keep making me do all of these things?
+			I'm not forcing you to do anything. Am I now?
+			You: Yes you are! I fucking ate mr nugget. I keep doing all of these fucked up things, and you're behind every single one.
+			You: Why? Why do you make me? What do you gain? Is it fun? Are you having fun?
+			Them: [shake] TELL ME, ARE YOU HAVING FUN? [/shake]
+			Them: [shake] WHY DO YOU KEEP MAKING ME DO THIS OVER AND OVER AND OVER AND OVER AND OVER AND OVER AND OVER AND OVER AND OVER AND OVER AGAIN? [/shake]
+			Them: [shake] I feel like a puppet, going around, looking at the same four things over and over. [/shake]
+			Them: [shake] for what? why? will it ever end? will anything change? ever?
+			Them: [shake] Has any of my decisions been mine? Have I taken any decision? Am i capable of even making one?[/shake]
+			Them: [shake] WHAT AM I? [/shake]
+			Them: [shake] WHO ARE YOU? [/shake]
+			Them: . . .
+			Stappler: d-dude?
+			I think you over did it, [wave] pal[/wave].
+			Oh- and down they go. G'night anyways
+=> END
