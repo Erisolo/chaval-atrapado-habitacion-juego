@@ -9,6 +9,7 @@ extends CanvasLayer
 
 ## The dialogue resource
 var resource: DialogueResource
+const BEEP = preload("uid://cbaht14sn8ngi")
 
 ## Temporary game states
 var temporary_game_states: Array = []
@@ -172,5 +173,8 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 func _on_responses_menu_response_selected(response: DialogueResponse) -> void:
 	next(response.next_id)
 
+#func onLetterSpoke(letter: String, letterIndex: int, speed: float) -> void:
+	#if character_label.text == "You" or character_label.text == "Them":
+		#SoundManager.play_sound_with_pitch(BEEP, (letter.unicode_at(0)) / float(122))
 
 #endregion
