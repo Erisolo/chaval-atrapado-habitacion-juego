@@ -1,5 +1,6 @@
 ~ start
 [shake]*BLUORRRRRRRRRP*[shake]
+do AnimationManager.animPlayer("tummy-ache")
 Your stomach hurts. Again.
 Maybe you should take your pills.
 => END
@@ -34,10 +35,13 @@ I think you should take it out.
 ~ Scissors
 Yeah, they're sharp enough.
 - Use the scissors.
+	do AnimationManager.animPlayer("stab")
+	do AnimationManager.waitForAnimation()
 	You push the scissors right into your belly.
 	You find some slimy rope.
 	Just shove it back inside.
 	Turns out there was no one inside you all along. That's a relief.
+	do AnimationManager.makeScissorsVisible()
 	do Checklist.getChore("InsideYou").finishCurrentStep()
 - Leave them.
 	Whatever you say, man. 

@@ -3,3 +3,7 @@
 % oh, do you need your bed? Are you sleepy? are you too tired? Such a crybaby. Grow up.  
 % You don't have time for any of this. There's things to do. Important things. Do you want to keep living like this? Good grief, dude.
 => END
+~ endDialogue
+You go to sleep
+do SceneManager.changeScene("res://scenes/credits.tscn", 3)
+=> END

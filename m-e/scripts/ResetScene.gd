@@ -7,7 +7,7 @@ func _ready() -> void:
 	for n in finish:
 		n.changeScene.connect(changeScene)
 	
-func changeScene(new_scene: String):
-	TransitionScreen.transition()
+func changeScene(new_scene: String, secondsToWait = 0, AudioRoot = null):
+	TransitionScreen.transition(secondsToWait, AudioRoot)
 	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file(new_scene)

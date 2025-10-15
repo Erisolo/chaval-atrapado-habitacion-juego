@@ -8,6 +8,7 @@ func _ready() -> void:
 	DialogueManager.dialogue_started.connect(dialogueOn)
 	DialogueManager.dialogue_ended.connect(dialogueOff)
 	position = PlayerInfo.lastPosition
+	AnimationManager.registerPlayerAnimator(animated_sprite)
 
 
 func _physics_process(delta: float) -> void:

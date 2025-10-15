@@ -12,13 +12,17 @@ var pillSprite = preload("res://assets/roomObjects/pills.png")
 var pillOutline = preload("res://assets/roomObjects/pillsOutline.png")
 var pillDialogue = preload("res://Dialogues/InsideYouDialogues.dialogue")
 var mirrorDialogue = preload("res://Dialogues/mirror.dialogue")
+var taintedScissorsSprite = preload("res://assets/roomObjects/scissorsBloody.png")
 # Photos route assets
 var photosDialogue = preload("res://Dialogues/Wardrobe.dialogue")
+# Ending assets
+var endDialogue = preload("res://Dialogues/FinalDialogue.dialogue")
 # global variables
 var stapplerDialogue = preload("res://Dialogues/Stappler.dialogue")
 var numChores = 3
 
 func _ready() -> void:
+	AnimationManager.registerScissors($tijeras/image, $tijeras/image/outline)
 	Checklist.ChoreAdded.connect(_add_chore_listener)
 	for n in Checklist.chores:
 		n.stepCompleted.connect(_manage_step)
@@ -35,9 +39,8 @@ func _add_chore_listener():
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Hamster3"):
-		var chore = Checklist.getChore("Hamster")
-		chore.currentStep = 3
-		_manage_step(chore)
+		Checklist.getChore("Hamster").currentStep = 3
+		_manage_step(Checklist.getChore("Hamster"))
 
 # Siento mucho lo que voy a hacer aquí
 func _manage_step(chore: Chore):
@@ -76,6 +79,7 @@ func _manage_step(chore: Chore):
 		var teeth = $Teeth
 		var mirror = $mirror
 		var scissors = $tijeras
+		var scissorsSprite = $tijeras/image
 		if chore.currentStep == 0:
 			if !chore.doneOnce[0]:
 				DialogueManager.show_dialogue_balloon(insideYouDialogue)
@@ -108,7 +112,8 @@ func _manage_step(chore: Chore):
 			changeStapplerDialogue("InsideYou2")
 		elif chore.currentStep == 3:
 			remove_child(teeth)
-			scissors.dialogueStartPoint = "NormalScissors"
+			scissors.dialogueStartPoint = "ScissorsAfter"
+			scissorsSprite.texture = taintedScissorsSprite
 			grappler.dialogueStartPoint = "BellyWound"
 		elif chore.currentStep == 4:
 			if !chore.doneOnce[4]:
@@ -117,7 +122,13 @@ func _manage_step(chore: Chore):
 				check_num_chores()
 				chore.doneOnce[4] = true
 			remove_child(teeth)
+			scissors.dialogueStartPoint = "ScissorsAfter"
+			scissorsSprite.texture = taintedScissorsSprite
 			grappler.dialogueStartPoint = "InsideYou4"
+		elif chore.currentStep == 5:
+			scissors.dialogueStartPoint = "ScissorsAfter"
+			scissorsSprite.texture = taintedScissorsSprite
+			remove_child(teeth);
 	elif chore.name == "Photos":
 		var wardrobe = $wardrobe
 		if chore.currentStep == 0:
@@ -143,17 +154,20 @@ func _manage_step(chore: Chore):
 				chore.finishCurrentStep()
 				numChores -= 1
 				check_num_chores()
-
+		elif chore.currentStep == 4:
+			wardrobe.dialogueStartPoint = "Wardrobe"
+	elif chore.name == "End":
+		if chore.currentStep == 0:
+			var stappler = $grapadora
+			stappler.dialogue = endDialogue
+		elif chore.currentStep == 1:
+			chore.doneOnce[0] = true
+			var bed = $cama
+			bed.dialogueStartPoint = "endDialogue"
+			
 func check_num_chores():
-	if numChores == 2:
-		# Cosa de bichos
-		pass
-	elif numChores == 1:
-		# Cosa de ojos
-		pass
-	elif numChores == 0:
-		# Fin del juego
-		pass
+	if numChores == 0:
+		Checklist.addChore("End",["Talk to the grappler", "Go to sleep"])
 
 func changeStapplerDialogue(newDialogue: String):
 	var stappler = $grapadora

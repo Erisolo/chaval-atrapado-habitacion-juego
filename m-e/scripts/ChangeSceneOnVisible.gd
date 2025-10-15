@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var new_scene: String
+@export var waitTime = 0
 
 signal win
 
@@ -10,4 +11,4 @@ func _ready() -> void:
 	
 func _on_body_entered(body: Node2D) -> void:
 	win.emit()
-	SceneManager.changeScene("res://scenes/game.tscn")
+	SceneManager.changeScene("res://scenes/game.tscn", waitTime)

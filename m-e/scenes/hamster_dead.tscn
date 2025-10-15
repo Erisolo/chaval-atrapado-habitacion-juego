@@ -118,29 +118,29 @@ visible = false
 position = Vector2(318, 102)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_on6cy")
-frame_progress = 0.027277792
+frame_progress = 0.0272778
 
 [node name="your2" type="AnimatedSprite2D" parent="Node2D"]
 visible = false
 position = Vector2(459, 70)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_imgr6")
-frame_progress = 0.47619295
+frame_progress = 0.476193
 
 [node name="hamster" type="AnimatedSprite2D" parent="Node2D"]
 visible = false
-position = Vector2(729.99994, 57.999996)
-rotation = 0.10404642
+position = Vector2(730, 58)
+rotation = 0.104046
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_76l25")
-frame_progress = 0.2598272
+frame_progress = 0.259827
 
 [node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Node2D"]
 visible = false
-position = Vector2(532, 180.00002)
+position = Vector2(532, 180)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_cwbke")
-frame_progress = 0.53978014
+frame_progress = 0.53978
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1

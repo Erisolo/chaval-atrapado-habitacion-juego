@@ -1,4 +1,6 @@
 ~ start
+if not Checklist.getChore("End").doneOnce[0]
+	do Checklist.getChore("End").finishCurrentStep()
 Stappler: Wassup, dude? I'm going to sleep soon. You should too.
 - Leave
 	Stappler: g'night, dude
@@ -34,5 +36,9 @@ Stappler: Wassup, dude? I'm going to sleep soon. You should too.
 			Them: . . .
 			Stappler: d-dude?
 			I think you over did it, [wave] pal[/wave].
+			do AnimationManager.animPlayer("falling")
+			do AnimationManager.waitForAnimation()
+			do AnimationManager.animPlayer("fallen")
 			Oh- and down they go. G'night anyways
+			do SceneManager.changeScene("res://scenes/credits.tscn", 3)
 => END
