@@ -6,6 +6,7 @@ extends Node2D
 const music = preload("uid://dhcerbp8kb27q")
 const dead = preload("uid://q52vm5wytak")
 const word = preload("uid://dvmgkrtgmxe1x")
+const BOOM = preload("uid://bnxxc6nqn6mdn")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -27,3 +28,4 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(secondsBetweenLabels).timeout
 	hamster.visible = true;
+	SoundManager.play_sound(BOOM)

@@ -6,6 +6,8 @@ var isWatching = true
 var iSawYou = false
 signal changeScene;
 const music = preload("uid://nsi28i61k28o")
+const cronch = preload("uid://cgxkphu2alp0b")
+
 
 func _ready() -> void:
 	sprite_2d.imWatching.connect(changeActiveWatching)
@@ -15,8 +17,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if isWatching && Input.is_action_pressed("Up") && !iSawYou:
-		SceneManager.changeScene("res://scenes/minigame_testing.tscn", 1)
+		SceneManager.changeScene("res://scenes/minigame_testing.tscn", 1.5)
 		SoundManager.stop_music()
+		SoundManager.play_sound(cronch)
 		iSawYou = true
 
 func changeActiveWatching() -> void:
