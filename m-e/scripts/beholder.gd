@@ -5,14 +5,18 @@ extends Node2D
 var isWatching = true
 var iSawYou = false
 signal changeScene;
+const music = preload("uid://nsi28i61k28o")
 
 func _ready() -> void:
 	sprite_2d.imWatching.connect(changeActiveWatching)
+	SoundManager.stop_music(1)
+	SoundManager.play_music(music, 1)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if isWatching && Input.is_action_pressed("Up") && !iSawYou:
-		SceneManager.changeScene("res://scenes/minigame_testing.tscn")
+		SceneManager.changeScene("res://scenes/minigame_testing.tscn", 1)
+		SoundManager.stop_music()
 		iSawYou = true
 
 func changeActiveWatching() -> void:

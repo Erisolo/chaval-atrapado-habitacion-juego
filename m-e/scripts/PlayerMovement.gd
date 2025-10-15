@@ -3,12 +3,16 @@ extends CharacterBody2D
 
 const SPEED = 200.0
 var dialogueActive = false
+const music = preload("uid://ctp7pea4a51fv")
 
 func _ready() -> void:
 	DialogueManager.dialogue_started.connect(dialogueOn)
 	DialogueManager.dialogue_ended.connect(dialogueOff)
 	position = PlayerInfo.lastPosition
 	AnimationManager.registerPlayerAnimator(animated_sprite)
+	if not SoundManager.is_music_playing(music):
+		SoundManager.stop_music(1)
+		SoundManager.play_music(music, 1)
 
 
 func _physics_process(delta: float) -> void:

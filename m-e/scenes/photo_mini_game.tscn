@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://blt7it0a3tas8"]
 
 [ext_resource type="Script" uid="uid://bthilxcjbhgu8" path="res://scripts/CameraMovement.gd" id="1_4s37h"]
-[ext_resource type="Script" path="res://scripts/ResetScene.gd" id="1_lityx"]
+[ext_resource type="Script" uid="uid://ch8bhq7u284qy" path="res://scripts/ResetScene.gd" id="1_lityx"]
 [ext_resource type="Script" path="res://scripts/PhotoFinder.gd" id="3_623ut"]
 [ext_resource type="PackedScene" uid="uid://db3vvj1i78anm" path="res://prefabs/nonexisting_person.tscn" id="4_ill1j"]
 [ext_resource type="Texture2D" uid="uid://d4bbbexvddyus" path="res://assets/wardrobeDoor.png" id="5_y61ny"]
