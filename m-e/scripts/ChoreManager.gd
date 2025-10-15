@@ -19,7 +19,6 @@ var photosDialogue = preload("res://Dialogues/Wardrobe.dialogue")
 var endDialogue = preload("res://Dialogues/FinalDialogue.dialogue")
 # global variables
 var stapplerDialogue = preload("res://Dialogues/Stappler.dialogue")
-var numChores = 3
 
 func _ready() -> void:
 	AnimationManager.registerScissors($tijeras/image, $tijeras/image/outline)
@@ -64,14 +63,14 @@ func _manage_step(chore: Chore):
 			changeStapplerDialogue("Hamster2")
 		elif chore.currentStep == 3:
 			hamster.dialogueStartPoint = "NoHamster"
+			changeStapplerDialogue("Hamster3")
 			if !chore.doneOnce[3]:
 				DialogueManager.show_dialogue_balloon(hamsterDialogue, "EatYourHamster")
 				chore.finishCurrentStep()
 				chore.doneOnce[3] = true
-				numChores -= 1
+				PlayerInfo.choresLeft -= 1
 				check_num_chores()
 			spawnStomachArea()
-			changeStapplerDialogue("Hamster3")
 		elif chore.currentStep == 4:
 			hamster.dialogueStartPoint = "NoHamster"
 			spawnStomachArea()
@@ -116,15 +115,15 @@ func _manage_step(chore: Chore):
 			scissorsSprite.texture = taintedScissorsSprite
 			grappler.dialogueStartPoint = "BellyWound"
 		elif chore.currentStep == 4:
+			grappler.dialogueStartPoint = "InsideYou4"
 			if !chore.doneOnce[4]:
 				chore.finishCurrentStep()
-				numChores -= 1
+				PlayerInfo.choresLeft -= 1
 				check_num_chores()
 				chore.doneOnce[4] = true
 			remove_child(teeth)
 			scissors.dialogueStartPoint = "ScissorsAfter"
 			scissorsSprite.texture = taintedScissorsSprite
-			grappler.dialogueStartPoint = "InsideYou4"
 		elif chore.currentStep == 5:
 			scissors.dialogueStartPoint = "ScissorsAfter"
 			scissorsSprite.texture = taintedScissorsSprite
@@ -152,7 +151,7 @@ func _manage_step(chore: Chore):
 				DialogueManager.show_dialogue_balloon(photosDialogue, "AllSolved")
 				chore.doneOnce[3] = true
 				chore.finishCurrentStep()
-				numChores -= 1
+				PlayerInfo.choresLeft -= 1
 				check_num_chores()
 		elif chore.currentStep == 4:
 			wardrobe.dialogueStartPoint = "Wardrobe"
@@ -160,13 +159,14 @@ func _manage_step(chore: Chore):
 		if chore.currentStep == 0:
 			var stappler = $grapadora
 			stappler.dialogue = endDialogue
+			stappler.dialogueStartPoint = "start"
 		elif chore.currentStep == 1:
 			chore.doneOnce[0] = true
 			var bed = $cama
 			bed.dialogueStartPoint = "endDialogue"
 			
 func check_num_chores():
-	if numChores == 0:
+	if PlayerInfo.choresLeft == 0:
 		Checklist.addChore("End",["Talk to the grappler", "Go to sleep"])
 
 func changeStapplerDialogue(newDialogue: String):
