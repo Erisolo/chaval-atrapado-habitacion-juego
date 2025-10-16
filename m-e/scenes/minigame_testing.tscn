@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://fb6ikft604nq"]
+[gd_scene load_steps=9 format=3 uid="uid://fb6ikft604nq"]
 
 [ext_resource type="PackedScene" uid="uid://fcf4rg1jdug0" path="res://prefabs/hamster_hand.tscn" id="1_0v1a8"]
 [ext_resource type="Script" uid="uid://b4x55gdohios8" path="res://scripts/StepOnMinigame.gd" id="1_owwkn"]
 [ext_resource type="PackedScene" uid="uid://wobmq3dc1nyj" path="res://prefabs/beholder.tscn" id="2_0qdjn"]
 [ext_resource type="PackedScene" uid="uid://dwqavy541s5hg" path="res://prefabs/hamster_cage.tscn" id="2_i7qf2"]
+[ext_resource type="Texture2D" uid="uid://dnwgmnkcc48yl" path="res://assets/arrow.png" id="4_l2aqi"]
+[ext_resource type="Script" uid="uid://bm6p0d13bbxhr" path="res://scenes/arrow.gd" id="5_xkf3d"]
 [ext_resource type="Script" uid="uid://4kpbq53svndu" path="res://scripts/ChangeSceneOnVisible.gd" id="6_owwkn"]
 [ext_resource type="Texture2D" uid="uid://s2r5jatvck36" path="res://assets/fondoHamster.png" id="7_hw54x"]
 
@@ -23,6 +25,12 @@ position = Vector2(2, 413)
 [node name="Camera2D" type="Camera2D" parent="RigidBody2D"]
 position = Vector2(10, -31)
 limit_bottom = 325
+
+[node name="Sprite2D2" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(163, -201)
+scale = Vector2(2.14356, 2.29806)
+texture = ExtResource("4_l2aqi")
+script = ExtResource("5_xkf3d")
 
 [node name="RigidBody2D2" parent="." instance=ExtResource("2_i7qf2")]
 z_index = -2
