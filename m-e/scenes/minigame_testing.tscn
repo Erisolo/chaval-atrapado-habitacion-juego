@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://wobmq3dc1nyj" path="res://prefabs/beholder.tscn" id="2_0qdjn"]
 [ext_resource type="PackedScene" uid="uid://dwqavy541s5hg" path="res://prefabs/hamster_cage.tscn" id="2_i7qf2"]
 [ext_resource type="Texture2D" uid="uid://dnwgmnkcc48yl" path="res://assets/arrow.png" id="4_l2aqi"]
-[ext_resource type="Script" uid="uid://bm6p0d13bbxhr" path="res://scenes/arrow.gd" id="5_xkf3d"]
+[ext_resource type="Script" path="res://scenes/arrow.gd" id="5_xkf3d"]
 [ext_resource type="Script" uid="uid://4kpbq53svndu" path="res://scripts/ChangeSceneOnVisible.gd" id="6_owwkn"]
 [ext_resource type="Texture2D" uid="uid://s2r5jatvck36" path="res://assets/fondoHamster.png" id="7_hw54x"]
 
@@ -27,7 +27,7 @@ position = Vector2(10, -31)
 limit_bottom = 325
 
 [node name="Sprite2D2" type="Sprite2D" parent="RigidBody2D"]
-position = Vector2(163, -201)
+position = Vector2(-1, -621.00006)
 scale = Vector2(2.14356, 2.29806)
 texture = ExtResource("4_l2aqi")
 script = ExtResource("5_xkf3d")
@@ -41,8 +41,8 @@ waitTime = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -3
-position = Vector2(10.5, -305.5)
-scale = Vector2(2.24414, 2.45117)
+position = Vector2(19.500118, -294.49982)
+scale = Vector2(2.2792966, 2.4941394)
 texture = ExtResource("7_hw54x")
 
 [node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]

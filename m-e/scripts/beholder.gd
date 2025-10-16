@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 	if isWatching && Input.is_action_pressed("Up") && !iSawYou:
 		SceneManager.changeScene("res://scenes/minigame_testing.tscn", 1.5)
 		SoundManager.stop_music()
-		SoundManager.play_sound(cronch)
+		#SoundManager.play_sound(cronch)
 		iSawYou = true
 
 func changeActiveWatching() -> void:

@@ -23,8 +23,8 @@ grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1149.0
-offset_bottom = 645.0
+offset_right = 1155.0
+offset_bottom = 650.0
 color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control" parent="."]
@@ -77,7 +77,7 @@ texture = ExtResource("8_nmdnh")
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
 offset_right = 1148.0
-offset_bottom = 1206.0
+offset_bottom = 1344.0
 theme = SubResource("Theme_0bpdh")
 bbcode_enabled = true
 text = "main Programmer
@@ -104,7 +104,9 @@ the background from the game balatro
 some polaroid pictures eri found on pinterest and altered to oblivion
 a picture of the RAKKESTAD wardrobe and NISSEDA mirror by ikea (also altered to oblivion)
 Sound effects by creator assets
-añadir aqui canciones si hay
+Lost in 8-bit by Mr. Quality
+Quiz Game Show Main Theme by motion array
+level || short by moodmode
 [/color]
 
 special thanks [color=darkgray]
@@ -112,8 +114,6 @@ Mario vaquerizo
 jovanni vázquez
 eri's mother (for the food)
 el reno renardo for the song  \"tu hamster\" [/color]
-
-
 
 
 
