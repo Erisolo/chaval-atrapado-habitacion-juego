@@ -36,11 +36,6 @@ func _add_chore_listener():
 	chore.stepCompleted.connect(_manage_step)
 	_manage_step(chore)
 	
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("Hamster3"):
-		Checklist.getChore("Hamster").currentStep = 3
-		_manage_step(Checklist.getChore("Hamster"))
-
 # Siento mucho lo que voy a hacer aquí
 func _manage_step(chore: Chore):
 	var grappler = $grapadora
