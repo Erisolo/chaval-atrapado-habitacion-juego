@@ -162,7 +162,7 @@ func _manage_step(chore: Chore):
 			
 func check_num_chores():
 	if PlayerInfo.choresLeft == 0:
-		Checklist.addChore("End",["Talk to the grappler", "Go to sleep"])
+		Checklist.addChore("End",["Talk to the stappler", "Go to sleep"])
 
 func changeStapplerDialogue(newDialogue: String):
 	var stappler = $grapadora
