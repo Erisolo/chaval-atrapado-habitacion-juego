@@ -84,12 +84,12 @@ animator = NodePath("PixelArtSmall(8)/AnimatedSprite2D")
 
 [node name="PixelArtSmall(8)" type="Sprite2D" parent="."]
 position = Vector2(572, 451)
-scale = Vector2(8.703705, 7.3511944)
+scale = Vector2(8.7037, 7.35119)
 texture = ExtResource("2_ir60y")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PixelArtSmall(8)"]
-position = Vector2(0.42111206, -11.477948)
-scale = Vector2(0.515172, 0.6081545)
+position = Vector2(0.421112, -11.4779)
+scale = Vector2(0.515172, 0.608154)
 sprite_frames = SubResource("SpriteFrames_1vfa4")
 autoplay = "default"
-frame_progress = 0.9547507
+frame_progress = 0.954751
