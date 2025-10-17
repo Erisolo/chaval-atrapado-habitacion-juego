@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dwpqip1hcoi08"]
 
 [ext_resource type="FontFile" uid="uid://bl644kfdk3f34" path="res://fonts/pixel.ttf" id="1_0bpdh"]
-[ext_resource type="Script" uid="uid://cpre1rfw6g427" path="res://scripts/rollingCredits.gd" id="1_ih6pn"]
+[ext_resource type="Script" path="res://scripts/rollingCredits.gd" id="1_ih6pn"]
 [ext_resource type="Texture2D" uid="uid://b4pfpt47cs7cu" path="res://assets/roomObjects/grapadora.png" id="2_ooihk"]
 [ext_resource type="Texture2D" uid="uid://c4eg3iblpxg75" path="res://assets/roomObjects/bed.png" id="3_ih6pn"]
 [ext_resource type="Texture2D" uid="uid://ct3f0dg7iqr3q" path="res://assets/roomObjects/pills.png" id="4_7lgdl"]
@@ -38,40 +38,40 @@ finishPos = -1089.0
 
 [node name="Grapadora" type="Sprite2D" parent="Control"]
 position = Vector2(847.5, 281.5)
-rotation = 0.6767643
-scale = Vector2(11.968751, 12.093751)
+rotation = 0.676764
+scale = Vector2(11.9688, 12.0938)
 texture = ExtResource("2_ooihk")
 
 [node name="Bed" type="Sprite2D" parent="Control"]
 position = Vector2(171, 505)
-rotation = -0.7213287
+rotation = -0.721329
 texture = ExtResource("3_ih6pn")
 
 [node name="Pills" type="Sprite2D" parent="Control"]
-position = Vector2(1010.9999, 786.9999)
-scale = Vector2(5.685184, 5.7916646)
+position = Vector2(1011, 787)
+scale = Vector2(5.68518, 5.79166)
 texture = ExtResource("4_7lgdl")
 
 [node name="Scissors" type="Sprite2D" parent="Control"]
-position = Vector2(226.99998, 172)
-rotation = -0.6700719
-scale = Vector2(4.1562495, 4.562499)
+position = Vector2(227, 172)
+rotation = -0.670072
+scale = Vector2(4.15625, 4.5625)
 texture = ExtResource("5_c6kru")
 
 [node name="Door" type="Sprite2D" parent="Control"]
 position = Vector2(575, 1478)
-scale = Vector2(5.5703125, 6.8593764)
+scale = Vector2(5.57031, 6.85938)
 texture = ExtResource("6_qbfqv")
 
 [node name="Photo2" type="Sprite2D" parent="Control"]
-position = Vector2(171.6631, 898.9847)
-rotation = -0.6585703
-scale = Vector2(1.5570743, 1.817232)
+position = Vector2(171.663, 898.985)
+rotation = -0.65857
+scale = Vector2(1.55707, 1.81723)
 texture = ExtResource("7_x5q3x")
 
 [node name="Photo3" type="Sprite2D" parent="Control"]
-position = Vector2(1004.0001, 471)
-rotation = 0.6163683
+position = Vector2(1004, 471)
+rotation = 0.616368
 texture = ExtResource("8_nmdnh")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
@@ -81,7 +81,7 @@ offset_bottom = 1344.0
 theme = SubResource("Theme_0bpdh")
 bbcode_enabled = true
 text = "main Programmer
-[color=darkgray]Mika rodríguez[/color]
+[color=darkgray]Micaela rodríguez[/color]
 
 a tiny bit of programing
 [color=darkgray]maría (eri) solórzano [/color]
@@ -89,10 +89,10 @@ a tiny bit of programing
 pixel art
 [color=darkgray]Eri solórzano[/color]
 (except the hamster food)
-[color=darkgray](mika Rodríguez)[/color]
+[color=darkgray](micaela Rodríguez)[/color]
 
 design
-[color=darkgray]Eri solórzano and mika rodríguez[/color]
+[color=darkgray]Eri solórzano and micaela rodríguez[/color]
 
 script
 [color=darkgray](mostly) eri solórzano[/color]
