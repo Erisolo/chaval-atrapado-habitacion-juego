@@ -1,12 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://db3vvj1i78anm"]
+[gd_scene load_steps=10 format=3 uid="uid://c1i23lgo0jhld"]
 
-[ext_resource type="Script" path="res://scripts/touchable.gd" id="1_jyaje"]
+[ext_resource type="Script" uid="uid://cm44gvs5hd4cw" path="res://scripts/touchable.gd" id="1_jyaje"]
 [ext_resource type="Texture2D" uid="uid://lh1ucf64nomu" path="res://assets/square.jpg" id="2_la1dj"]
 [ext_resource type="Texture2D" uid="uid://b73mb10hdo7dq" path="res://assets/crossAnimation.png" id="3_klexv"]
 [ext_resource type="Script" uid="uid://cury24mvkcjvy" path="res://scripts/ShowUIOnClick.gd" id="4_ae8mu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ae8mu"]
-radius = 47.0
+radius = 140.04
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hpkp6"]
 atlas = ExtResource("3_klexv")
@@ -51,10 +51,10 @@ scale = Vector2(0.08375, 0.095593)
 texture = ExtResource("2_la1dj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." node_paths=PackedStringArray("ui", "event")]
-position = Vector2(1.666666, 1.6666689)
-scale = Vector2(4.479166, 5.520833)
+position = Vector2(1.66667, 1.66667)
+scale = Vector2(4.47917, 5.52083)
 sprite_frames = SubResource("SpriteFrames_gfbif")
-frame_progress = 0.25304976
+frame_progress = 0.25305
 script = ExtResource("4_ae8mu")
 ui = NodePath(".")
 event = NodePath("..")

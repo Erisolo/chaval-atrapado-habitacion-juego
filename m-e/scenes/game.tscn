@@ -52,7 +52,7 @@ size = Vector2(44, 98)
 size = Vector2(54.6823, 33.4285)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bt5mj"]
-size = Vector2(26, 22)
+size = Vector2(55, 55)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
 size = Vector2(34.1053, 21.6517)
@@ -211,7 +211,7 @@ scale = Vector2(0.772118, 1.16667)
 shape = SubResource("RectangleShape2D_37s47")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tijeras"]
-position = Vector2(-23, -49)
+position = Vector2(-28.5, -30.5)
 shape = SubResource("RectangleShape2D_bt5mj")
 
 [node name="grapadora" type="RigidBody2D" parent="." node_paths=PackedStringArray("collison_area")]
