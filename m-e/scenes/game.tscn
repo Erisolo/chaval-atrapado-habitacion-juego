@@ -211,30 +211,30 @@ shape = SubResource("RectangleShape2D_37s47")
 position = Vector2(-28.5, -30.5)
 shape = SubResource("RectangleShape2D_bt5mj")
 
-[node name="grapadora2" type="Node2D" parent="." unique_id=1054083237 node_paths=PackedStringArray("collison_area")]
+[node name="grapadora" type="Node2D" parent="." unique_id=1054083237 node_paths=PackedStringArray("collison_area")]
 z_index = 9
 script = ExtResource("2_p57ef")
 collison_area = NodePath("image/Area2D")
 dialogue = ExtResource("7_264po")
 
-[node name="image" type="Sprite2D" parent="grapadora2" unique_id=384083723]
+[node name="image" type="Sprite2D" parent="grapadora" unique_id=384083723]
 z_index = 5
 position = Vector2(126, 211)
 scale = Vector2(3, 3)
 texture = ExtResource("7_ssvqc")
 
-[node name="outline" type="Sprite2D" parent="grapadora2/image" unique_id=27101813]
+[node name="outline" type="Sprite2D" parent="grapadora/image" unique_id=27101813]
 visible = false
 z_index = -1
 position = Vector2(1.14441e-05, 0.333336)
 texture = ExtResource("8_264po")
 
-[node name="Area2D" type="Area2D" parent="grapadora2/image" unique_id=263116152 node_paths=PackedStringArray("ui")]
+[node name="Area2D" type="Area2D" parent="grapadora/image" unique_id=263116152 node_paths=PackedStringArray("ui")]
 collision_mask = 2
 script = ExtResource("5_0tnpc")
 ui = NodePath("../outline")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="grapadora2/image/Area2D" unique_id=1246214847]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="grapadora/image/Area2D" unique_id=1246214847]
 position = Vector2(8.16667, -7.36978)
 scale = Vector2(0.772118, 1.16667)
 shape = SubResource("RectangleShape2D_1kice")
