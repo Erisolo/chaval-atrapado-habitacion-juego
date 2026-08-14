@@ -13,6 +13,7 @@ func _ready() -> void:
 	if not SoundManager.is_music_playing(music):
 		SoundManager.stop_music(1)
 		SoundManager.play_music(music, 1)
+	SoundManager.set_music_volume(0.6)
 
 
 func _physics_process(delta: float) -> void:
