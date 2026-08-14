@@ -6,7 +6,8 @@ extends Sprite2D
 signal button_pressed;
 
 func _process(_delta) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
+	if (Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("Interact") 
+	or Input.is_action_just_pressed("ui_cancel")):
 		button_pressed.emit()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

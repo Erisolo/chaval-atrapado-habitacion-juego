@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cnk61fbhc4qt4"]
+[gd_scene format=3 uid="uid://cnk61fbhc4qt4"]
 
 [ext_resource type="Script" uid="uid://cksrl7mqkxiuh" path="res://scripts/ShowForSeconds.gd" id="2_i7v4k"]
 [ext_resource type="Texture2D" uid="uid://cex3wgasoc6ea" path="res://assets/pixel_art_small(8).png" id="2_ir60y"]
@@ -74,20 +74,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Sprite2D" type="Sprite2D" node_paths=PackedStringArray("animator")]
+[node name="Sprite2D" type="Sprite2D" unique_id=1792620351 node_paths=PackedStringArray("animator")]
 script = ExtResource("2_i7v4k")
 Scene = "res://scenes/game.tscn"
 chore = "InsideYou"
 animator = NodePath("PixelArtSmall(8)/AnimatedSprite2D")
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Node2D" type="Node2D" parent="." unique_id=500077872]
 
-[node name="PixelArtSmall(8)" type="Sprite2D" parent="."]
+[node name="PixelArtSmall(8)" type="Sprite2D" parent="." unique_id=1342071690]
 position = Vector2(572, 451)
 scale = Vector2(8.7037, 7.35119)
 texture = ExtResource("2_ir60y")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PixelArtSmall(8)"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PixelArtSmall(8)" unique_id=1317889577]
 position = Vector2(0.421112, -11.4779)
 scale = Vector2(0.515172, 0.608154)
 sprite_frames = SubResource("SpriteFrames_1vfa4")

@@ -9,7 +9,9 @@ func _ready() -> void:
 	label = checknote.get_child(1)
 	
 func _process(_delta) -> void:
-	if checknote.visible && Input.is_action_just_pressed("ui_accept"):
+	if checknote.visible && (Input.is_action_just_pressed("ui_accept") 
+	or Input.is_action_just_pressed("Interact") 
+	or Input.is_action_just_pressed("ui_cancel")):
 		button_pressed.emit()
 		
 #es un poko guarrada pero me la pela

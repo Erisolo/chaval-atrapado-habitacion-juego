@@ -8,11 +8,15 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="M E"
 run/main_scene="uid://dqih7xgvju7to"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -24,7 +28,7 @@ SceneManager="*res://scripts/ResetScene.gd"
 PlayerInfo="*res://scripts/PlayerInfo.gd"
 Checknote="*res://scenes/checknote.tscn"
 AnimationManager="*res://scripts/PlayerAnimationManager.gd"
-SoundManager="*res://addons/sound_manager/sound_manager.gd"
+SoundManager="*uid://be5a3nf52t572"
 
 [dialogue_manager]
 
